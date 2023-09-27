@@ -1,14 +1,23 @@
+.LayoutContent{
+    background-color: var(--ColorTwo);
+    min-height: 100vh;
+}
+
 header{
-    background-color: #ff0000;
+    background-color: var(--ColorFour);
     min-height: 5rem;
 }
 
 .Content{
-    background-color: yellow;
+    background-color: var(--ColorThree);
     margin: 0 5rem;
+    min-height: 800px;
 }
 
 footer{
-    background-color: purple;
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+    background-color: var(--ColorOne);
     min-height: 5rem;
 }

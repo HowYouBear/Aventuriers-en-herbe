@@ -1,7 +1,6 @@
 function Accueil(){
     return(
         <>
-            <p>Accueil</p>
         </>
     )
 }

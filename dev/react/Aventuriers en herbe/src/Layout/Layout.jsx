@@ -10,13 +10,11 @@ function Layout(){
     return(
         <div className={style.LayoutContent}>
             <header>
-                <p>Header</p>
             </header>
             <div className={style.Content}>
                 {pathname === "/" ? <Accueil/> : <Outlet/>}
             </div>
             <footer>
-                <p>Footer</p>
             </footer>
         </div>
     )
