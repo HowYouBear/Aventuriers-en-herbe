@@ -3,7 +3,7 @@ import styles from './Introduction.module.scss'
 function Introduction(){
     return(
         <div className={styles.introduction}>
-            <h1> Introduction au Jeu de Rôle </h1>
+            <h1 className={styles.titre}> Introduction au Jeu de Rôle </h1>
             <h2>Etape 1 - C'est quoi le jeu de rôle ?</h2>
             <p>Le jeu de rôle, c'est bien plus qu'un simple passe-temps : c'est une aventure dans l'imaginaire, une exploration de mondes inconnus et une expérience sociale unique. À la croisée entre le théâtre improvisé et le jeu de société, il repose sur la créativité, la narration collaborative et la construction de personnages. Dans le jeu de rôle, vous ne jouez pas seulement un personnage, vous le devenez, adoptant ses pensées, ses réactions et son destin. C'est un moyen extraordinaire de s'évader de la réalité, de développer ses compétences d'acteur, de scénariste et de résolution de problèmes, tout en tissant des liens profonds avec vos compagnons de jeu.</p>
             <h2>Etape 2 - Comment se déroule une partie ?</h2>
