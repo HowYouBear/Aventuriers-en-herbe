@@ -4,8 +4,6 @@
     margin-bottom: 1rem;
 }
 
-
-
 .introduction{
     display: flex;
     flex-flow: column;
@@ -14,6 +12,8 @@
     align-items: center;
     margin-left: 3rem;
     margin-right: 3rem;
+    padding-left: 20rem;
+    padding-right: 20rem;
     > h2{
         font-family: var(--FontSecond)
     }
