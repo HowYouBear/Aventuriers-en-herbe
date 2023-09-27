@@ -1,7 +1,8 @@
 .LayoutContent{
     background-color: var(--ColorTwo);
-    min-height: 100vh;
-    min-width: 640px;
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 .Content{
@@ -15,9 +16,6 @@
 }
 
 footer{
-    position: absolute;
-    width: 100vw;
-    bottom: 0;
     background-color: var(--ColorOne);
     min-height: 5rem;
 }
