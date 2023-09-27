@@ -22,7 +22,7 @@ function Connexion(){
             <p>Confirmation mot de passe</p>
             <input type="password" required />
             <input type="checkbox" name="CGU" required/>
-            <label for="CGU">j'accepte les conditions générales et <br />la politique de confidentialité de <br /> "Les Aventuriers en herbe"</label>
+            <label for="CGU">j'accepte les <span className={styles.sousligne}>conditions générales</span> et <br />la <span className={styles.sousligne}>politique de confidentialité</span> de <br /> "Les Aventuriers en herbe"</label>
             <button type='submit'>Inscription</button>
         </form>
         </div>
