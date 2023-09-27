@@ -11,14 +11,14 @@
     text-align: center;
     align-items: center;
     margin: 0 15%;
-    padding: 0 10%;
+    padding: 0 5%;
     > h2{
         font-family: var(--FontSecond)
     }
     > img{
         display: flex;
         flex-flow: column;
-        width: 90%;
+        width: 75%;
         margin: 1rem;
     }
 }
