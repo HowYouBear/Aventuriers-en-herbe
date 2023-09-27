@@ -1,0 +1,29 @@
+.connexionInscription{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    gap: 5rem;
+    margin-top: 10rem;
+}
+
+.connexion, .inscription{
+    display: flex;
+    flex-flow: column;
+    padding: 2rem;
+    height: fit-content;
+    gap: 0.5rem;
+    text-align: center;
+    > h2{
+        margin-bottom: 2rem;
+    }
+    > button{
+        cursor: pointer;
+        font-weight: 700;
+        margin: 1rem;
+        padding: 0.5rem;
+        border: 2px solid white;
+        background-color: #625454;
+        color: white;
+    }
+}
+
