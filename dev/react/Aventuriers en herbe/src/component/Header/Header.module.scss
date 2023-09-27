@@ -1,0 +1,29 @@
+header{
+    display: flex;
+    align-items: center;    
+    flex-direction: column;
+
+    background-color: var(--ColorFour);
+    min-height: 5rem;
+    > img{
+        width: 200px;
+    }
+    > nav{
+        background-color: var(--ColorOne);
+        width: 100%;
+
+        display: flex;
+        justify-content: center;    
+        > ul{
+            display: flex;
+            gap: 1rem;
+            list-style: none;
+            > li{
+                border-left: 1px solid white;
+                border-right: 1px solid white;
+                padding: 0 1rem;
+                color: white
+            }
+        }
+    }
+}

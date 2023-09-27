@@ -1,3 +1,5 @@
+import Header from "../component/Header/Header";
+import Footer from "../component/Footer/Footer";
 import Accueil from "../page/Accueil/Accueil";
 import style from "./Layout.module.scss"
 
@@ -9,13 +11,11 @@ function Layout(){
     
     return(
         <div className={style.LayoutContent}>
-            <header>
-            </header>
+            <Header/>
             <div className={style.Content}>
                 {pathname === "/" ? <Accueil/> : <Outlet/>}
             </div>
-            <footer>
-            </footer>
+            <Footer/>
         </div>
     )
 }
