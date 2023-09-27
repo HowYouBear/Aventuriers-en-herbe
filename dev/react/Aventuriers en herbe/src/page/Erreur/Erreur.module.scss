@@ -4,16 +4,28 @@
     flex-flow: row;
     align-items: center;
     justify-content: center;
-    height: 10rem;
-    width: 15rem;
+    height: 20rem;
+    width: 25rem;
 }
 
 .messageErreur{
     background-color: #DBDAC0;
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
+    gap: 1rem;
     align-items: center;
     justify-content: center;
-    height: 9rem;
-    width: 14rem;
+    height: 19rem;
+    width: 24rem;
+    font-size: larger;
+}
+
+.button{
+    border: none;
+    background-color: #625454;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: white;
 }
