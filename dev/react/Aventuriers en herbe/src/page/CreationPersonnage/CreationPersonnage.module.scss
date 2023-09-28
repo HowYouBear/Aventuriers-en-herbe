@@ -1,0 +1,322 @@
+.creationPersonnageFrame{
+    > p:first-child{
+        text-align: center;
+        padding: 1rem;
+    }
+}
+
+.fichePersonnage{
+    display: grid;
+    background-color: white;
+    grid-template-columns: repeat(3, 350px);
+}
+
+.firstRow{
+    padding: 0.5rem;
+    .inspirationProficiency{
+        padding: 0.7rem 1rem;
+        > div{
+            display: grid;
+            grid-template-columns: 4rem 14rem;
+        }
+        > div {
+            border: 1px solid black;
+            border-radius: 1rem;
+            text-align: center;
+            > input{
+                width: 3rem;
+                border-radius: 1rem;
+            }
+        }
+    }
+}
+
+.statistique{
+    display: grid;
+    grid-template-columns: 6.4rem 1fr;
+    border-top: 1px solid black;
+    border-top-left-radius: 1rem;
+    padding-bottom: 0.4rem;
+        > div:first-child{
+        border: 1px solid black;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.2rem;
+
+    }
+    > div:nth-child(2){
+        display: flex;
+        flex-direction: column;
+        padding: 0.4rem 1rem;        
+    }
+    .statModifier{
+        width: 2.5rem;
+        height: 1.7rem;
+        border-radius: 1rem;
+        text-align: center;
+    }
+    .statValue{
+        height: 3rem;
+        width: 4.5rem;
+        border: none;
+        border-radius: 1rem;
+        margin: 0.2rem;
+        background-color: #EEEEEE;
+        text-align: center;
+    }
+    .skills{
+        > div{
+            display: flex;
+            > p{
+                padding-left: 0.5rem;
+                font-size: 0.8rem;
+            }
+        }
+        > div:first-child{
+            padding-bottom: 0.5rem;
+            > input{
+                rotate: (45deg);
+            }
+        }
+    }
+}
+
+.otherMasteries{
+    text-align: center;
+    > textarea{
+        width: 100%;
+        min-height: 7.7rem;
+        resize: vertical;
+    }
+}
+
+.secondRow{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0.5rem;
+}
+
+.modifier{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    > div{
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 1rem;
+        padding: 0.2rem;
+        margin:  0 0.2rem;
+        > input{
+            height: 3rem;
+            width: 4.5rem;
+            border: none;
+            border-radius: 1rem;
+            margin: 0.2rem;
+            background-color: #EEEEEE;
+            text-align: center;
+        }
+    }
+}
+
+.healthStatistiques{
+    > div{
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 1rem;
+         >div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            > p{
+                color: #777777;
+                font-size: 0.8rem;
+            }
+            > input{
+                height: 1.2rem;
+                width: 3rem;
+                border: none;
+                border-radius: 1rem;
+                margin: 0.2rem;
+                background-color: #EEEEEE;
+                text-align: center;
+            }   
+        }
+        > input{
+            width: 90%;
+            height: 2rem;
+            border: none;
+            border-radius: 1rem;
+            margin: 0.2rem;
+            background-color: #EEEEEE;
+            text-align: center;
+            font-size: 1.7rem;
+        }
+    }
+    
+}
+
+.healthDeath{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0.2rem;
+    > div:first-child{
+        border: 1px solid black;
+        border-radius: 1rem;
+        padding: 0.2rem;
+        > div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            > p{
+                color: #777777;
+                font-size: 0.8rem;
+            }
+            > input{
+                height: 1.2rem;
+                width: 70%;
+                border: none;
+                border-radius: 1rem;
+                margin: 0.2rem;
+                background-color: #EEEEEE;
+                text-align: center;
+            }
+        }
+        > input{
+            height: 2rem;
+            width: 70%;
+            border: none;
+            border-radius: 1rem;
+            margin: 0.2rem;
+            background-color: #EEEEEE;
+            text-align: center;
+        }
+    }
+    > div:nth-child(2){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+        border-radius: 1rem;
+        > div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        > p{
+            font-size: 0.8rem;
+        }
+    }
+}
+
+.attackSpell{
+    border: 1px solid black;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2rem;
+    > div{
+        display: grid;
+        grid-template-columns: 7rem 4rem 5rem;
+        > input{
+            border: none;
+            border-radius: 1rem;
+            margin: 0.2rem;
+            padding: 0.2rem;
+            background-color: #EEEEEE;
+        }
+        > p{
+            font-size: 0.7rem;
+        }
+    }
+    > textarea{
+        margin: 0.2rem;
+        width: 97%;
+        min-height: 7.7rem;
+        resize: vertical;
+    }
+}
+
+.equipment{
+    border: 1px solid black;
+    border-radius: 1rem;
+    > div{
+        > div:first-child{
+            display: flex;
+            justify-content: center;
+            >div{
+                text-align: center;
+                padding: 0 0.2rem;
+                > input{
+                    border: none;
+                    border-radius: 1rem;
+                    width: 2.4rem;
+                    margin: 0.2rem;
+                    padding: 0.2rem;
+                    background-color: #EEEEEE;
+                }
+            }
+        }
+        > div:nth-child(2){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            > textarea{
+                margin: 0.2rem;
+                width: 90%;
+                min-height: 7.7rem;
+                resize: vertical;
+            }
+        }
+    }
+}
+
+.thridRow{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0.5rem;
+}
+
+.character{
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+    > div{
+        border: 1px solid black;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0.2rem;
+        > textarea{
+            margin: 0.2rem;
+            width: 90%;
+            height: 4rem;
+            resize: vertical;
+        }
+    }
+}
+
+.capacity{
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    > textarea{
+        margin: 0.2rem;
+        width: 100%;
+        min-height: 10rem;
+        resize: vertical;
+    }
+}
