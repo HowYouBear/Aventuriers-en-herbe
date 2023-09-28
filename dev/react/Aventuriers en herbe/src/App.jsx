@@ -10,6 +10,8 @@ import Contact from './page/Contact/Contact';
 import CreationPersonnage from './page/CreationPersonnage/CreationPersonnage';
 import Introduction from './page/Introduction/Introduction';
 import LanceurDes from './page/LanceurDes/LanceurDes';
+import Univers from './page/Univers/Univers';
+import Outils from './page/Outils/Outils';
 
 
 
@@ -43,6 +45,16 @@ function App() {
         {
           path: "/lanceurDes",
           element: <LanceurDes/>,
+          errorElement: <Erreur/>,
+        },
+        {
+          path: "/univers",
+          element: <Univers/>,
+          errorElement: <Erreur/>,
+        },
+        {
+          path: "/outils",
+          element: <Outils/>,
           errorElement: <Erreur/>,
         },
       ],

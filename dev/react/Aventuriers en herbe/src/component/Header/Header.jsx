@@ -1,5 +1,6 @@
 import style from "./Header.module.scss"
 import logo from "../../Ressources/LogoTempo.jpg"
+import {Link} from "react-router-dom"
 
 function Header(){
     return(
@@ -7,10 +8,10 @@ function Header(){
             <img src={logo} alt="logo"/>
             <nav>
                 <ul>
-                    <li>Accueil</li>
-                    <li>Introduction</li>
+                    <li><Link to = "/">Accueil</Link></li>
+                    <li><Link to = "/introduction">Introduction</Link></li>
                     <div className={style.dropdown}>
-                        <li>Univers</li>
+                        <li><Link to = "/univers">Univers</Link></li>
                         <div className={style.dropdownContent}>
                             <ul>
                                 <li>Donjon & Dragon</li>
@@ -22,15 +23,15 @@ function Header(){
                         </div>
                     </div>
                     <div className={style.dropdown}>
-                        <li>Outils</li>
+                        <li><Link to = "/outils">Outils</Link></li>
                         <div className={style.dropdownContent}>
                             <ul>
-                                <li>Lanceur de dé</li>
-                                <li>Création personnage D&D5</li>
+                                <li><Link to = "/lanceurdes">Lanceur de dés</Link></li>
+                                <li><Link to = "/creationpersonnage">Création personnage D&D5</Link></li>
                             </ul>
                         </div>
                     </div>
-                    <li>Contact</li>
+                    <li><Link to = "/contact">Contact</Link></li>
                 </ul>
             </nav>
         </header>
