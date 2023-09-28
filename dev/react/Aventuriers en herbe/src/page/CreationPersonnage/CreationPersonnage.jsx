@@ -1,7 +1,7 @@
 function CreationPersonnage(){
     return(
         <>
-            <p>Creation de personnage</p>
+               <p>Creation de personnage</p>
         </>
     )
 }
