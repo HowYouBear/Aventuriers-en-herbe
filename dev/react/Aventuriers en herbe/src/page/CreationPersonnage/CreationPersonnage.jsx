@@ -1,13 +1,35 @@
 import { useEffect, useState } from "react";
 import style from "./CreationPersonnage.module.scss"
 
+
 function CreationPersonnage(){
 
     const [strenght, setStrenght] = useState(0);
+    const [strenghtModifier, setStrenghtModifier] = useState(0);
+
+    const [dexterity, setdexterity] = useState(0);
+    const [dexterityModifier, setDexterityModifier] = useState(0);
+
+    const [consitution, setConsitution] = useState(0);
+    const [consitutionModifier, setConsitutionModifier] = useState(0);
+
+    const [intelligence, setIntelligence] = useState(0);
+    const [intelligenceModifier, setIntelligenceModifier] = useState(0);
+
+    const [wisdom, setWisdom] = useState(0);
+    const [wisdomModifier, setWisdomModifier] = useState(0);
+
+    const [charisma, setCharisma] = useState(0);
+    const [charismaModifier, setCharismaModifier] = useState(0);
 
     useEffect(() =>{
-        console.log(strenght);
-    }, [strenght])
+        setStrenghtModifier(Math.floor((strenght-10)/2))
+        setDexterityModifier(Math.floor((dexterity-10)/2))
+        setConsitutionModifier(Math.floor((consitution-10)/2))
+        setIntelligenceModifier(Math.floor((intelligence-10)/2))
+        setWisdomModifier(Math.floor((wisdom-10)/2))
+        setCharismaModifier(Math.floor((charisma-10)/2))
+    }, [strenght, dexterity, consitution, intelligence, wisdom, charisma])
 
     return(
         <div className={style.creationPersonnageFrame}>
@@ -31,13 +53,15 @@ function CreationPersonnage(){
                     <div className={style.mainStatistiques}>
                         <div className={style.statistique}>
                             <div>
-                                <input type="text" className={style.statModifier}/>
+                                <input type="text" 
+                                className={style.statModifier}
+                                value={strenghtModifier}/>
                                 
                                 <input 
                                 type="text" 
                                 className={style.statValue}
                                 value={strenght}
-                                onChange={(e) => setStrenght(e.target.value)}
+                                onChange={(e) => setStrenght(e.target.value.replace(/\D/g, ''))}
                                 />
                                 <p>Force</p>
                             </div>
@@ -54,8 +78,13 @@ function CreationPersonnage(){
                         </div>
                         <div className={style.statistique}>
                             <div>
-                                <input type="text" className={style.statModifier}/>
-                                <input type="text" className={style.statValue}/>
+                                <input type="text"
+                                className={style.statModifier}
+                                value={dexterityModifier}/>
+                                <input type="text"
+                                className={style.statValue}
+                                value={dexterity}
+                                onChange={(e) => setdexterity(e.target.value)}/>
                                 <p>Agilité</p>
                             </div>
                             <div className={style.skills}>
@@ -79,8 +108,13 @@ function CreationPersonnage(){
                         </div>
                         <div className={style.statistique}>
                             <div>
-                                <input type="text" className={style.statModifier}/>
-                                <input type="text" className={style.statValue}/>
+                                <input type="text"
+                                className={style.statModifier}
+                                value={consitutionModifier}/>
+                                <input type="text"
+                                className={style.statValue}
+                                value={consitution}
+                                onChange={(e) => setConsitution(e.target.value)}/>
                                 <p>Constitution</p>
                             </div>
                             <div className={style.skills}>
@@ -92,8 +126,13 @@ function CreationPersonnage(){
                         </div>
                         <div className={style.statistique}>
                             <div>
-                                <input type="text" className={style.statModifier}/>
-                                <input type="text" className={style.statValue}/>
+                                <input type="text"
+                                className={style.statModifier}
+                                value={intelligenceModifier}/>
+                                <input type="text"
+                                className={style.statValue}
+                                value={intelligence}
+                                onChange={(e) => setIntelligence(e.target.value)}/>
                                 <p>Intelligence</p>
                             </div>
                             <div className={style.skills}>
@@ -125,8 +164,13 @@ function CreationPersonnage(){
                         </div>
                         <div className={style.statistique}>
                             <div>
-                                <input type="text" className={style.statModifier}/>
-                                <input type="text" className={style.statValue}/>
+                                <input type="text"
+                                className={style.statModifier}
+                                value={wisdomModifier}/>
+                                <input type="text"
+                                className={style.statValue}
+                                value={wisdom}
+                                onChange={(e) => setWisdom(e.target.value)}/>
                                 <p>Sagesse</p>
                             </div>
                             <div className={style.skills}>
@@ -158,8 +202,13 @@ function CreationPersonnage(){
                         </div>
                         <div className={style.statistique}>
                             <div>
-                                <input type="text" className={style.statModifier}/>
-                                <input type="text" className={style.statValue}/>
+                                <input type="text"
+                                className={style.statModifier}
+                                value={charismaModifier}/>
+                                <input type="text"
+                                className={style.statValue}
+                                value={charisma}
+                                onChange={(e) => setCharisma(e.target.value)}/>
                                 <p>Charisme</p>
                             </div>
                             <div className={style.skills}>
