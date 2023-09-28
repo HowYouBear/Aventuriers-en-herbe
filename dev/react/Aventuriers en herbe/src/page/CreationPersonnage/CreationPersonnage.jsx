@@ -1,6 +1,14 @@
+import { useEffect, useState } from "react";
 import style from "./CreationPersonnage.module.scss"
 
 function CreationPersonnage(){
+
+    const [strenght, setStrenght] = useState(0);
+
+    useEffect(() =>{
+        console.log(strenght);
+    }, [strenght])
+
     return(
         <div className={style.creationPersonnageFrame}>
             <p>Remplissez la fiche personnage si-dessous et voyez en retour les potentielles erreurs inscsrites</p>
@@ -24,7 +32,13 @@ function CreationPersonnage(){
                         <div className={style.statistique}>
                             <div>
                                 <input type="text" className={style.statModifier}/>
-                                <input type="text" className={style.statValue}/>
+                                
+                                <input 
+                                type="text" 
+                                className={style.statValue}
+                                value={strenght}
+                                onChange={(e) => setStrenght(e.target.value)}
+                                />
                                 <p>Force</p>
                             </div>
                             <div className={style.skills}>
