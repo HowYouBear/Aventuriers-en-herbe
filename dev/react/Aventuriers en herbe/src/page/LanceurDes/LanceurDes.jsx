@@ -24,8 +24,9 @@ function LanceurDes() {
 
   return (
     <div className={styles.lanceurDes}>
+      <h1>Lanceur de dés</h1>
       <div className={styles.input}>
-        <select name="des" id="des">
+        <select className={styles.select} name="des" id="des">
           <option value="4">d4</option>
           <option value="6">d6</option>
           <option value="8">d8</option>
