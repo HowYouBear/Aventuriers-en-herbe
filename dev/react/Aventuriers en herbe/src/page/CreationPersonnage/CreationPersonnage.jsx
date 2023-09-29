@@ -427,9 +427,10 @@ function CreationPersonnage(){
                 <p>Pour attaques et sorts, inscrivez l'équipement donner par votre classe / race</p>
                 <p>Pour l'équipement et les pièces (cuivre, argent, électrum, or et platine), inscrivez l'équipement donner par votre classe / race</p>
                 <p>Pour les capacités et traits, inscrivez pour une dernière fois les élèments donner par votre classe / race</p>
+                <p>Le bonus de maîtrise est un valeur fixe. Elle commence à 2 au niveau 1 et monte de 1 point tout les 4 niveaux</p>
                 <p>Partie 6: Personnalité du personnage.</p>
                 <p>Il est fort probable que vous ayez déjà vu l'anciennement charte d'alignement. Celle-ci à disparu en faveur de ce nouveau système offrant plus de liberté d'expression au joueur.</p>
-                <p>Les cases sont assez intuitive en elle même: Traits de personnalité, idéaux, liens et défauts corresponde au caractéristique de votre personnage. Vous y êtes libre d'y d'écrire la personnalité du personnage que vous incanerez. Certains joueurs peuvent avoir du mal à remplir ces cases car ils ne savent pas encore comment ils vont intéragir avec le monde offert par le maitre de jeu. Ce n'est pas grave, car c'est case ne sont cruciale au déroulement d'une partie. Cependant, les remplirs en cours d'aventure au fur et mesure que vous contruisez l'histoire avec les différents joueurs et maitre de jeu est une bonne chose à faire.</p>
+                <p>Les cases sont assez intuitive en elle même: Traits de personnalité, idéaux, liens et défauts correspondent aux caractéristiques de votre personnage. Vous y êtes libre d'y d'écrire la personnalité du personnage que vous incanerez. Certains joueurs peuvent avoir du mal à remplir ces cases car ils ne savent pas encore comment ils vont intéragir avec le monde offert par le maitre de jeu. Ce n'est pas grave, car c'est case ne sont cruciale au déroulement d'une partie. Cependant, les remplirs en cours d'aventure au fur et mesure que vous contruisez l'histoire avec les différents joueurs et maitre de jeu est une bonne chose à faire.</p>
             </div>
         </div>
     )

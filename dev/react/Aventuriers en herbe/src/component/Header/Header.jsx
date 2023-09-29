@@ -1,5 +1,5 @@
 import style from "./Header.module.scss"
-import logo from "../../Ressources/LogoTempo.jpg"
+import logo from "../../Ressources/Logo.png"
 import {Link} from "react-router-dom"
 
 function Header(){
