@@ -55,7 +55,7 @@ function CreationPersonnage(){
                             <div>
                                 <input type="text" 
                                 className={style.statModifier}
-                                value={strenghtModifier}/>
+                                defaultValue={strenghtModifier}/>
                                 
                                 <input 
                                 type="text" 
@@ -80,7 +80,7 @@ function CreationPersonnage(){
                             <div>
                                 <input type="text"
                                 className={style.statModifier}
-                                value={dexterityModifier}/>
+                                defaultValue={dexterityModifier}/>
                                 <input type="text"
                                 className={style.statValue}
                                 value={dexterity}
@@ -110,7 +110,7 @@ function CreationPersonnage(){
                             <div>
                                 <input type="text"
                                 className={style.statModifier}
-                                value={consitutionModifier}/>
+                                defaultValue={consitutionModifier}/>
                                 <input type="text"
                                 className={style.statValue}
                                 value={consitution}
@@ -128,7 +128,7 @@ function CreationPersonnage(){
                             <div>
                                 <input type="text"
                                 className={style.statModifier}
-                                value={intelligenceModifier}/>
+                                defaultValue={intelligenceModifier}/>
                                 <input type="text"
                                 className={style.statValue}
                                 value={intelligence}
@@ -166,7 +166,7 @@ function CreationPersonnage(){
                             <div>
                                 <input type="text"
                                 className={style.statModifier}
-                                value={wisdomModifier}/>
+                                defaultValue={wisdomModifier}/>
                                 <input type="text"
                                 className={style.statValue}
                                 value={wisdom}
@@ -204,7 +204,7 @@ function CreationPersonnage(){
                             <div>
                                 <input type="text"
                                 className={style.statModifier}
-                                value={charismaModifier}/>
+                                defaultValue={charismaModifier}/>
                                 <input type="text"
                                 className={style.statValue}
                                 value={charisma}
