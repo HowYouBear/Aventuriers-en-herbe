@@ -19,7 +19,6 @@ function Contact(){
             <p>Vous pouvez laissez un mail à l'adresse suivante ou alors soumettre un message directement grâce au formulaire si dessous</p>
             <p>uneadresse@mail.com</p>
             <form onSubmit={handleSubmit(onSubmit)} className={style.contactForm}>
-                <h2>Se connecter</h2>
                 <label htmlFor="sujet">Sujet</label>
                 <input name='sujet' type='texte' {...register("sujet", { required: true })}  />
                 {errors.sujet && <span>Un sujet est nécessaire</span>}
