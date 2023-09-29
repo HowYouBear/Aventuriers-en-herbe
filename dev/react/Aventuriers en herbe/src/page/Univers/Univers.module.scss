@@ -1,0 +1,14 @@
+.frameUnivers{
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    margin: 5% 20%;
+    > h1{
+        text-decoration: underline;
+        margin-bottom: 5%;
+    }
+    > h2{
+        text-decoration: underline;
+        margin: 5% 0;
+    }
+}
