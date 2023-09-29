@@ -40,7 +40,7 @@ function scrollUp (){
             <div className={styles.texteLanceur}>
                 <h2>Lanceur de dés</h2>
                 <p>Pas de jeu de rôle sans dés ! Notre page de Lanceurs de Dés virtuels garantit des lancers équitables pour prendre des décisions cruciales, résoudre des énigmes, et déterminer l'issue de vos quêtes.</p>
-                <Link to ="/lanceurdes" onClick={scrollUp}>Aller à la page Lanceur de dés</Link>
+                <button><Link to ="/lanceurdes" onClick={scrollUp}>Aller à la page Lanceur de dés</Link></button>
             </div>
         </div>
     )
