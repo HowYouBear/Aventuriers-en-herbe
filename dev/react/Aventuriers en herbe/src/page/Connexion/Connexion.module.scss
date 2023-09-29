@@ -14,9 +14,20 @@
     height: fit-content;
     gap: 0.7rem;
     text-align: center;
+    align-items: center;
     > h2{
         margin-bottom: 2rem;
         text-decoration: underline;
+    }
+    > input{
+        border: none;
+        width: 10rem;
+        height: 1.5rem;
+    }
+    > span{
+        font-size: small;
+        border: 1px solid red;
+        padding: 0.2rem;
     }
     > button{
         cursor: pointer;

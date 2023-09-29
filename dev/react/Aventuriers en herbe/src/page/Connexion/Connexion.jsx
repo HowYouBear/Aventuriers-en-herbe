@@ -1,29 +1,55 @@
 import styles from './Connexion.module.scss'
+import { useForm } from "react-hook-form"
 
 function Connexion(){
+
+const {
+    register,
+    handleSubmit,
+    formState: { errors }
+} = useForm();
+
+const {
+    register: register2,
+    handleSubmit: handleSubmit2,
+    formState: { errors: errors2 }
+} = useForm();
+
+function onSubmit (data){
+    console.log(data);
+}
+function onSubmit2 (data2){
+    console.log(data2);
+}
+
     return(
         <div className={styles.connexionInscription}>
-        <form className={styles.connexion}>
-            <h2>Se connecter</h2>
-            <p>Addresse mail</p>
-            <input type="email" required />
-            <p>Mot de passe</p>
-            <input type="password" required />
-            <button type='submit'>Se connecter</button>
-        </form>
-        <form className={styles.inscription}>
+            <form onSubmit={handleSubmit(onSubmit)} className={styles.connexion}>
+                <h2>Se connecter</h2>
+                <label htmlFor="email">Adresse email</label>
+                <input name='email' type='email' placeholder='john@doe.com' {...register("email", { required: true })}  />
+                {errors.email && <span>Une addresse email est nécessaire</span>}
+                <label htmlFor="password">Mot de passe</label>
+                <input name='password' type='password' placeholder='Mot de passe' {...register("password", { required: true })} />
+                {errors.password && <span>Un mot de passe est nécessaire</span>}
+                <button type="submit">Connexion</button>
+            </form>
+
+        <form onSubmit={handleSubmit2(onSubmit2)} className={styles.inscription}>
             <h2>Créer un compte</h2>
-            <p>Addresse mail</p>
-            <input type="email" required />
-            <p>Confirmation addresse mail</p>
-            <input type="email" required />
-            <p>Mot de passe</p>
-            <input type="password" required />
-            <p>Confirmation mot de passe</p>
-            <input type="password" required />
-            <input type="checkbox" name="CGU" required/>
-            <label for="CGU">j'accepte les <span className={styles.sousligne}>conditions générales</span> et <br />la <span className={styles.sousligne}>politique de confidentialité</span> de <br /> "Les Aventuriers en herbe"</label>
-            <button type='submit'>Inscription</button>
+            <label htmlFor="email2">Addresse mail</label>
+            <input name='email2' placeholder='john@doe.com' {...register2("email2", { required: true })}  />
+            {errors2.email2 && <span>Une addresse email est nécessaire</span>}
+            <label htmlFor="confEmail2">Confirmation d'adresse mail</label>
+            <input name='confEmail2' placeholder='john@doe.com' {...register2("confEmail2", { required: true })}  />
+            {errors2.confEmail2 && <span>Une addresse email est nécessaire</span>}
+            <label htmlFor="password2">Mot de passe</label>
+            <input name='password2' {...register2("password2", { required: true })}  />
+            {errors2.password2 && <span>Un mot de passe est nécessaire</span>}
+            <label htmlFor="confPassword2">Confirmation de mot de passe</label>
+            <input name='confPassword2' {...register2("confPassword2", { required: true })}  />
+            {errors2.confPassword2 && <span>Un mot de passe est nécessaire</span>}
+            <button type="submit">Créer</button>
         </form>
         </div>
     )
