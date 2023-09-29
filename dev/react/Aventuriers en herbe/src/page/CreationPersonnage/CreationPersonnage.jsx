@@ -22,18 +22,53 @@ function CreationPersonnage(){
     const [charisma, setCharisma] = useState(0);
     const [charismaModifier, setCharismaModifier] = useState(0);
 
+    const [statCheck, setStatCheck] = useState('');
+    
     useEffect(() =>{
         setStrenghtModifier(Math.floor((strenght-10)/2))
+        if(strenght > 18){
+            setStatCheck(statCheck + " Force")
+        }
+    }, [strenght])
+    
+    useEffect(() =>{
         setDexterityModifier(Math.floor((dexterity-10)/2))
+        if(dexterity > 18){
+            setStatCheck(statCheck + " Agilité")
+        }
+    }, [dexterity])
+
+    useEffect(() =>{
         setConsitutionModifier(Math.floor((consitution-10)/2))
+        if(consitution > 18){
+            setStatCheck(statCheck + " consitution")
+        }
+    }, [consitution])
+
+    useEffect(() =>{
         setIntelligenceModifier(Math.floor((intelligence-10)/2))
+        if(intelligence > 18){
+            setStatCheck(statCheck + " Intelligence")
+        }
+    }, [intelligence])
+
+    useEffect(() =>{
         setWisdomModifier(Math.floor((wisdom-10)/2))
+        if(wisdom > 18){
+            setStatCheck(statCheck + " Sagesse")
+        }
+    }, [wisdom])
+
+    useEffect(() =>{
         setCharismaModifier(Math.floor((charisma-10)/2))
-    }, [strenght, dexterity, consitution, intelligence, wisdom, charisma])
+        if(charisma > 18){
+            setStatCheck(statCheck + " Charisme")
+        }
+    }, [charisma])
 
     return(
         <div className={style.creationPersonnageFrame}>
-            <p>Remplissez la fiche personnage si-dessous et voyez en retour les potentielles erreurs inscsrites</p>
+            <p>Remplissez la fiche personnage si-dessous et voyez en retour (en-dessous de la fiche personnage) les potentielles erreurs inscsrites</p>
             <div className={style.fichePersonnage}>
                 <div className={style.firstRow}>
                     <div className={style.inspirationProficiency}>
@@ -53,9 +88,9 @@ function CreationPersonnage(){
                     <div className={style.mainStatistiques}>
                         <div className={style.statistique}>
                             <div>
-                                <input type="text" 
+                                <input type="text" disabled
                                 className={style.statModifier}
-                                defaultValue={strenghtModifier}/>
+                                value={strenghtModifier}/>
                                 
                                 <input 
                                 type="text" 
@@ -78,9 +113,9 @@ function CreationPersonnage(){
                         </div>
                         <div className={style.statistique}>
                             <div>
-                                <input type="text"
+                                <input type="text" disabled
                                 className={style.statModifier}
-                                defaultValue={dexterityModifier}/>
+                                value={dexterityModifier}/>
                                 <input type="text"
                                 className={style.statValue}
                                 value={dexterity}
@@ -108,9 +143,9 @@ function CreationPersonnage(){
                         </div>
                         <div className={style.statistique}>
                             <div>
-                                <input type="text"
+                                <input type="text" disabled
                                 className={style.statModifier}
-                                defaultValue={consitutionModifier}/>
+                                value={consitutionModifier}/>
                                 <input type="text"
                                 className={style.statValue}
                                 value={consitution}
@@ -126,9 +161,9 @@ function CreationPersonnage(){
                         </div>
                         <div className={style.statistique}>
                             <div>
-                                <input type="text"
+                                <input type="text" disabled
                                 className={style.statModifier}
-                                defaultValue={intelligenceModifier}/>
+                                value={intelligenceModifier}/>
                                 <input type="text"
                                 className={style.statValue}
                                 value={intelligence}
@@ -164,9 +199,9 @@ function CreationPersonnage(){
                         </div>
                         <div className={style.statistique}>
                             <div>
-                                <input type="text"
+                                <input type="text" disabled
                                 className={style.statModifier}
-                                defaultValue={wisdomModifier}/>
+                                value={wisdomModifier}/>
                                 <input type="text"
                                 className={style.statValue}
                                 value={wisdom}
@@ -202,9 +237,9 @@ function CreationPersonnage(){
                         </div>
                         <div className={style.statistique}>
                             <div>
-                                <input type="text"
+                                <input type="text" disabled
                                 className={style.statModifier}
-                                defaultValue={charismaModifier}/>
+                                value={charismaModifier}/>
                                 <input type="text"
                                 className={style.statValue}
                                 value={charisma}
@@ -355,6 +390,22 @@ function CreationPersonnage(){
                         <p>Capacités et traits</p>
                     </div>
                 </div>
+            </div>
+            <div className={style.retourErreur}>
+                <p>Retour : {statCheck}</p>
+                <p>Comment construire sa fiche de personnage?</p>
+                <p>Consulter le livre des joueurs pour consulter les différentes races et classes</p>
+                <p>Une fois votre race et classe choisis vous devez définir vos statistiques. Pour cela il existe plusieurs méthode:</p>
+                <p>Pour remplir la valeur d'une statistique, il suffit de remplir la case grise au-dessus de la statistique correspondante.</p>
+                <p>La méthode classique, le lancé de dé 6.</p>
+                <p>Lancer 4d6 pour et retirer la valeur la plus faible pour définir votre statistique. C'est à dire que le score peut être de 3 à 18.</p>
+                <p>La méthode distribution standard.</p>
+                <p>Distribuer les valeurs 15 14 13 10 8 parmis vos statistiques</p>
+                <p>La méthode d'achat</p>
+                <p>Toutes vos statistiques commencent à 8 et disposer de 27 points à dépenser. Les scores de statistiques de 9 à 13 coûtent 1 point, alors que les scores 14 et 15 coûtent 2 points. Il n'est pas possible de dépasser un score de 15.</p>
+                <p>Selon votre maître de jeu, vous serez libre de choisir la méthode de distribution des statistiques. Il est notable que la méthode des lancés et généralement la plus efficace car elle offre le plus de statistiques, si la chance vous souris.</p>
+                <p>Vous avez maintenant vos statistiques. Notez que le modifieur (valeur indiquer au dessus de la valeur inscrite) est automatiquement calculer. Pour connaitre la valeur du modifieur, il faut appliquer la formule suivante: (valeur de la statistique - 10)/2.</p>
+                <p></p>
             </div>
         </div>
     )

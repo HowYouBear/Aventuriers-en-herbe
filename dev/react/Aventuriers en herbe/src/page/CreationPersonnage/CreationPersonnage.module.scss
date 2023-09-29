@@ -320,3 +320,9 @@
         resize: vertical;
     }
 }
+
+.retourErreur{
+    > p:first-child{
+        text-align: center;
+    }
+}
