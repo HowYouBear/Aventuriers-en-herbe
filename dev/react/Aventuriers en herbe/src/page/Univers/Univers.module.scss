@@ -2,6 +2,7 @@
     display: flex;
     flex-flow: column;
     text-align: center;
+    align-items: center;
     margin: 5% 20%;
     > h1{
         text-decoration: underline;
@@ -10,5 +11,15 @@
     > h2{
         text-decoration: underline;
         margin: 5% 0;
+    }
+    > button{
+        cursor: pointer;
+        margin: 5%;
+        padding: 2.5%;
+        width: 15rem;
+        background-color: var(--ColorTwo);
+        color: white;
+        border: 1px solid white;
+        font-weight: 600;
     }
 }
