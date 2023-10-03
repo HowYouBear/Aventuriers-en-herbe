@@ -15,7 +15,7 @@ function Header(){
                         <div className={style.dropdownContent}>
                             <ul>
                                 <li>Donjon & Dragon</li>
-                                <li>Pathfinder</li>
+                                <li><Link to = "/Pokémon">Pokémon</Link></li>
                                 <li>Bladerunner</li>
                                 <li>Fallout</li>
                                 <li>Final Fantasy XIV</li>

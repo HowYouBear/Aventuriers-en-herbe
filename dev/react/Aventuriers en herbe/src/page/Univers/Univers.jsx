@@ -16,9 +16,9 @@ const Univers = () => {
             <h2>Donjons et Dragons</h2>
             <p>Donjons et Dragons, abrégé D&D, est le pionnier des jeux de rôle. Plongeant les joueurs dans des mondes médiévaux-fantastiques peuplés de chevaliers, de magiciens, de dragons et de créatures mythiques, D&D offre une expérience classique de JDR. Les aventuriers entreprennent des quêtes héroïques, résolvent des énigmes anciennes, et se battent contre des ennemis redoutables. L'accent est mis sur la créativité, l'improvisation et la coopération pour surmonter les défis.</p>
             <Link to = "/universDnD"><Button>Donjons et Dragons</Button></Link>
-            <h2>PathFinder</h2>
-            <p>Pathfinder est un univers de jeu de rôle qui s'inspire grandement de D&D. Cependant, il se démarque par sa profondeur et sa complexité. Les joueurs explorent un monde fantastique riche en détails, avec une multitude de races, de classes de personnages et de règles avancées. L'accent est mis sur la personnalisation, permettant aux joueurs de créer des personnages uniques et de vivre des aventures épiques dans un cadre de haute fantasy.</p>
-            <Link to = "/universpathfinder"><Button>PathFinder</Button></Link>
+            <h2>Pokemon</h2>
+            <p>Les jeux de rôle Pokémon, offrent une expérience passionnante où vous contrôlez un personnage explorant un monde détaillé. Ces jeux combinent une intrigue captivante avec des phases d'exploration, vous permettant de visiter des villes, rencontrer des personnages et combattre des adversaires. Partir à l'aventure avec un partenaire Pokémon peut être à la fois excitant et intimidant si vous êtes nouveau dans ce type de jeu. Ce guide vous aidera à maîtriser les bases et à apprécier pleinement votre aventure.</p>
+            <Link to = "/Pokémon"><Button>Pokémon</Button></Link>
             <h2>Blade Runner</h2>
             <p>Inspiré par le film culte de science-fiction, l'univers de Blade Runner offre une plongée dans un futur dystopique où les humains cohabitent avec des répliques, des androïdes presque indiscernables. Les joueurs incarnent des enquêteurs, des chasseurs de primes ou des fugitifs, naviguant dans les intrigues complexes d'une société corrompue. L'ambiance cyberpunk, la technologie avancée et les dilemmes moraux sont au cœur de cette expérience de jeu immersive.</p>
             <Link to = "/universbladerunner"><Button>Blade Runner</Button></Link>

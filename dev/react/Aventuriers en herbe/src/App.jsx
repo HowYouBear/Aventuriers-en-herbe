@@ -12,6 +12,8 @@ import Introduction from './page/Introduction/Introduction';
 import LanceurDes from './page/LanceurDes/LanceurDes';
 import Univers from './page/Univers/Univers';
 import Outils from './page/Outils/Outils';
+import Pokemon from './page/Pokemon/Pokemon';
+
 
 
 
@@ -55,6 +57,11 @@ function App() {
         {
           path: "/outils",
           element: <Outils/>,
+          errorElement: <Erreur/>,
+        },
+        {
+          path: "/Pokémon",
+          element: <Pokemon/>,
           errorElement: <Erreur/>,
         },
       ],
