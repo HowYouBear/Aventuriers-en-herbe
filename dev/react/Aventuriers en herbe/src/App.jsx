@@ -7,6 +7,8 @@ import Erreur from './page/Erreur/Erreur';
 // Pages
 import Connexion from './page/Connexion/Connexion';
 import Contact from './page/Contact/Contact';
+import MentionsLegales from './page/MentionsLegales/MentionsLegales';
+import CGU from './page/CGU/CGU';
 import CreationPersonnage from './page/CreationPersonnage/CreationPersonnage';
 import Introduction from './page/Introduction/Introduction';
 import LanceurDes from './page/LanceurDes/LanceurDes';
@@ -32,6 +34,15 @@ function App() {
         {
           path: "/contact",
           element: <Contact/>,
+          errorElement: <Erreur/>,
+        },        {
+          path: "/mentionslegales",
+          element: <MentionsLegales/>,
+          errorElement: <Erreur/>,
+        },
+        {
+          path: "/cgu",
+          element: <CGU/>,
           errorElement: <Erreur/>,
         },
         {

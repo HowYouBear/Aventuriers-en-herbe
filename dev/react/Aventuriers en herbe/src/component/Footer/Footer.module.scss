@@ -1,0 +1,37 @@
+footer{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    > .logoButtons{
+        display: flex;
+        flex-flow: row;
+        margin: 1rem;
+        > ul{
+        display: flex;
+        flex-flow: column;
+        gap: 1.2rem;
+        list-style: none;
+        > li{
+            > a{
+                text-decoration: none;
+                color: rgb(129, 129, 129);
+                font-weight: 500;
+            }
+        }
+    }
+    > img{
+        width: 10rem;
+        opacity: 0.5;
+    };
+    }
+
+    > p{
+        color: black;
+        margin-bottom: 1rem;
+    }
+}
+
+
+
+
