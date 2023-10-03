@@ -326,3 +326,10 @@
         text-align: center;
     }
 }
+
+.section{
+    padding: 1rem;
+    > h3{
+        padding: 1rem;
+    }
+}
