@@ -18,51 +18,30 @@ header{
             display: flex;
             list-style: none;
             > li{
-                border-left: 1px solid white;
+                display: flex;
                 padding: 0 1rem;
-                color: white
-            }
-            > li:last-child{
-                border-right: 1px solid white;
             }
         }
     }
 }
 
-a{
-    text-decoration: none;
-    color: white;
-}
-
 .dropdown{
     position: relative;
     display: inline-block;
-    border-left: 1px solid white;
     color: white;
     padding: 0 1rem;
 }
 
-.dropdown:last-child{
-    border-right: 1px solid white;
-}
-
 .dropdown:hover .dropdownContent{
     display: block;
-    left: 0;
-    width: 200px;
 }
 
 .dropdownContent{
     > ul{
         list-style: none;
-        padding: 0.2rem 0.3rem;
-    }
-    > ul li:hover{
-        background-color: var(--ColorTwo);
     }
     display: none;
     position: absolute;
-    background-color: var(--ColorOne);
-    z-index: 1;
+    background-color: var(--ColorTwo);
 }
 
