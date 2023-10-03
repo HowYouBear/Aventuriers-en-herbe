@@ -39,6 +39,10 @@ header{
 .dropdownContent{
     > ul{
         list-style: none;
+        border-bottom: 1px solid white;
+        > li{
+            border-top: 1px solid white;
+        }
     }
     display: none;
     position: absolute;
