@@ -1,14 +1,20 @@
 import React from 'react';
 import style from './Pokemon.module.scss';
+import logoPokemon from '../../Ressources/LogoPokemon.png';
+import backgroundImage from '../../Ressources/Pikachu.png';
 
 const Pokemon = () => {
   return (
     <div className={style.Pokemon}>
+        <img src={logoPokemon} alt="LogoPokemon" className={style.PokemonImage} />
 
       <h2 className={style.SectionTitle}>Choisissez votre Pokémon</h2>
       <p className={style.Paragraph}>
         Une des premières choses à faire dans votre aventure sera de choisir votre premier partenaire Pokémon. Chaque jeu vous offrira un choix d’espèces de Pokémon différentes, mais dans la majorité des cas vous aurez à choisir entre un Pokémon de type Feu, un Pokémon de type Plante et un Pokémon de type Eau. Votre choix pourra faciliter ou compliquer le début du jeu, mais très vite, vous aurez un éventail de Pokémon de tous types à votre disposition. N’hésitez donc pas à adopter celui que vous trouvez le plus mignon, et partez à l'aventure ! Sachez toutefois que ces trois espèces de Pokémon sont introuvables à l’état sauvage, et que vous devrez donc les échanger si vous les voulez toutes. Vous en apprendrez davantage sur l’échange de Pokémon plus loin dans cet article.
       </p>
+
+      <div className={style.Pokemon} style={{ backgroundImage: `url(${backgroundImage})` }}></div>
+
 
       <h2 className={style.SectionTitle}>Qu'est-ce qu’un type de Pokémon ?</h2>
       <p className={style.Paragraph}>
@@ -81,7 +87,7 @@ En règle générale, obtenir tous les Badges d’Arène ou terminer toutes les 
 Vous ne parviendrez certainement pas à remplir votre Pokédex avant la fin de l’histoire du jeu, mais même une fois l’aventure principale terminée, vous pourrez continuer à explorer la région à la recherche des Pokémon qui vous ont échappé. En plus des nombreux Pokémon que vous pouvez obtenir via capture ou évolution, vous devrez également traquer de rares Pokémon légendaires particulièrement difficiles à attraper si vous souhaitez remplir votre Pokédex. Échanger des Pokémon avec d’autres joueurs est également une bonne façon de compléter votre collection.
 Outre un sentiment de fierté, remplir votre Pokédex vous donnera généralement une récompense d’une grande valeur, comme le Charme Ovale, qui aide à obtenir des Œufs de Pokémon, ou le Charme Chroma, qui augmente les chances de rencontrer de rares Pokémon chromatiques.
       </p> 
-       
+
     </div>
   );
 };
