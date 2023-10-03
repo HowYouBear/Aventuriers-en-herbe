@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import style from "./CreationPersonnage.module.scss"
+import Section from "../../component/Section/Section";
+import Fade from "../../component/Fade/Fade";
 
 function CreationPersonnage(){
 
@@ -97,8 +99,94 @@ function CreationPersonnage(){
 
     return(
         <div className={style.creationPersonnageFrame}>
-
-            <p>Remplissez la fiche personnage si-dessous et voyez en retour (en-dessous de la fiche personnage) les potentielles erreurs inscsrites</p>
+            <div className={style.retourErreur}>
+                <p>Comment construire sa fiche de personnage?</p>
+                <div className={style.section}>
+                    <h3 onClick={dropDownOne}>Partie 1: Choisir son personnage.</h3>
+                    <Fade visible={isOpenOne} animateEnter={true}>
+                        <Section text={
+                        <div>
+                            <p>Consulter le livre des joueurs pour consulter les différentes races et classes</p>
+                        </div>
+                        }/>
+                    </Fade>
+                </div>
+                <div className={style.section}>
+                    <h3 onClick={dropDownTwo}>Partie 2: Choisir ses statistiques.</h3>
+                    <Fade visible={isOpenTwo}>
+                        <Section text={
+                            <div>
+                                <p>Pour remplir la valeur d'une statistique, il suffit de remplir la case grise au-dessus de la statistique correspondante.</p>
+                                <p>Une fois votre race et classe choisis vous devez définir vos statistiques. Pour cela il existe plusieurs méthode:</p>
+                                <p>La méthode classique, le lancé de dé 6:</p>
+                                <p>Lancer 4d6 pour et retirer la valeur la plus faible pour définir votre statistique. C'est à dire que le score peut être de 3 à 18.</p>
+                                <p>La méthode de distribution standard:</p>
+                                <p>Distribuer les valeurs 15 14 13 10 8 parmis vos statistiques</p>
+                                <p>La méthode d'achat:</p>
+                                <p>Toutes vos statistiques commencent à 8 et disposer de 27 points à dépenser. Les scores de statistiques de 9 à 13 coûtent 1 point, alors que les scores 14 et 15 coûtent 2 points. Il n'est pas possible de dépasser un score de 15.</p>
+                                <p>Selon votre maître de jeu, vous serez libre de choisir la méthode de distribution des statistiques. Il est notable que la méthode des lancés et généralement la plus efficace car elle offre le plus de statistiques, si la chance vous souris.</p>
+                                <p>Vous avez maintenant vos statistiques. Notez que le modifieur (valeur indiquer au dessus de la valeur inscrite) est automatiquement calculer. Pour connaitre la valeur du modifieur, il faut appliquer la formule suivante: (valeur de la statistique - 10)/2.</p>
+                                <p>La classe défini quels jet de sauvegarde vous bénéficier.</p>
+                                <p>Un total de deux compétences pour être sélectionner en plus des compétences défini par la race et classe.</p>
+                            </div>
+                        }/>
+                    </Fade>
+                </div>
+                <div className={style.section}>
+                    <h3 onClick={dropDownThree}>Partie 3: Le reste des statistiques.</h3>
+                    <Fade visible={isOpenThree}>
+                        <Section text={
+                            <div>
+                            <p>La classe d'armure correspond à 10 plus le modifieur de dextérité plus les éventuelles armures.</p>
+                            <p>L'initiative correspond à la valeur du modifieur de dextérité.</p>
+                            <p>La vitesse dépend de votre race.</p>
+                            <p>La santé est calculer en fonction de la classe. Pour savoir le dé correspondant, consulter le livre des joueurs.</p>
+                            <p>Au niveau 1, la santé correspond à la valeur maximum du dé de vie plus le modificateur.</p>
+                            <p>A chaque niveau, il est possible de soit lancer un dé de vie pour gagner autant de santé que le résultat, soit choisir la moyenne (d6: 4, d8: 5, D10: 6, D12: 7).</p>
+                            <p>Les points de vie temporaires correspondent à divers bonus qui peuvent être lancer en faveur du joueur (comme des sorts ou des festins offert par le gentil MJ). Attention, car les bonus ne sont pas cumulable.</p>
+                            </div>
+                        }/>
+                    </Fade>
+                </div>
+                <div className={style.section}>
+                        <h3 onClick={dropDownFour}>Partie 4: Les jets de sauvegarde contre la mort.</h3>
+                    <Fade visible={isOpenFour}>
+                        <Section text={
+                            <div>
+                                <p>Elle se décompose en deux partie: les succès et les echecs.</p>
+                                <p>Quand votre personnage tombe sous les 0 points de vie, il doit alors lancer chaque tour suivant un dé 20. Si le joueur fait au moins 10, c'est un succès. Une réussite critique donne trois succès alors qu'un echec critique donne 2 éches.</p>
+                                <p>Si un joueur à terre réussi à obtenir 3 succès, il se relève alors avec un point de vie. Si il s'agit de 3 échecs, référencer vous à la partie 1 de ce guide.</p>
+                            </div>
+                        }/>
+                    </Fade>
+                </div>
+                <div className={style.section}>
+                    <h3 onClick={dropDownFive}>Partie 5: Le reste de la fiche.</h3>
+                    <Fade visible={isOpenFive}>
+                        <Section text={
+                        <div>
+                            <p>Cette partie s'appel plus communément "copier coller le contenu du livre de joueur".</p>
+                            <p>Dans les maîtrises et langue, incrivez les maitrises et langues donner par votre race et classe.</p>
+                            <p>Pour attaques et sorts, inscrivez l'équipement donner par votre classe / race</p>
+                            <p>Pour l'équipement et les pièces (cuivre, argent, électrum, or et platine), inscrivez l'équipement donner par votre classe / race</p>
+                            <p>Pour les capacités et traits, inscrivez pour une dernière fois les élèments donner par votre classe / race</p>
+                            <p>Le bonus de maîtrise est un valeur fixe. Elle commence à 2 au niveau 1 et monte de 1 point tout les 4 niveaux</p>
+                        </div>
+                        }/>
+                    </Fade>
+                </div>
+                <div className={style.section}>
+                    <h3 onClick={dropDownSix}>Partie 6: Personnalité du personnage.</h3>
+                    <Fade visible={isOpenSix}>
+                        <Section text={
+                        <div>
+                            <p>Il est fort probable que vous ayez déjà vu l'anciennement charte d'alignement. Celle-ci à disparu en faveur de ce nouveau système offrant plus de liberté d'expression au joueur.</p>
+                            <p>Les cases sont assez intuitive en elle même: Traits de personnalité, idéaux, liens et défauts correspondent aux caractéristiques de votre personnage. Vous y êtes libre d'y d'écrire la personnalité du personnage que vous incanerez. Certains joueurs peuvent avoir du mal à remplir ces cases car ils ne savent pas encore comment ils vont intéragir avec le monde offert par le maitre de jeu. Ce n'est pas grave, car c'est case ne sont cruciale au déroulement d'une partie. Cependant, les remplirs en cours d'aventure au fur et mesure que vous contruisez l'histoire avec les différents joueurs et maitre de jeu est une bonne chose à faire.</p>
+                        </div>
+                        }/>
+                    </Fade>
+                </div>
+            </div>
             <div className={style.fichePersonnageFrame}>
                 <div className={style.fichePersonnage}>
                     <div className={style.firstRow}>
@@ -423,83 +511,7 @@ function CreationPersonnage(){
                     </div>
                 </div>
             </div>
-            <div className={style.retourErreur}>
-                <p>Retour : {statCheck}</p>
-                <p>Comment construire sa fiche de personnage?</p>
-                <div className={style.section}>
-                    <h3 onClick={dropDownOne}>Partie 1: Choisir son personnage.</h3>
-                    {isOpenOne && 
-                    <div>
-                        <p>Consulter le livre des joueurs pour consulter les différentes races et classes</p>
-                    </div>
-                    }
-                </div>
-                <div className={style.section}>
-                    <h3 onClick={dropDownTwo}>Partie 2: Choisir ses statistiques.</h3>
-                    {isOpenTwo &&
-                    <div>
-                        <p>Pour remplir la valeur d'une statistique, il suffit de remplir la case grise au-dessus de la statistique correspondante.</p>
-                        <p>Une fois votre race et classe choisis vous devez définir vos statistiques. Pour cela il existe plusieurs méthode:</p>
-                        <p>La méthode classique, le lancé de dé 6:</p>
-                        <p>Lancer 4d6 pour et retirer la valeur la plus faible pour définir votre statistique. C'est à dire que le score peut être de 3 à 18.</p>
-                        <p>La méthode de distribution standard:</p>
-                        <p>Distribuer les valeurs 15 14 13 10 8 parmis vos statistiques</p>
-                        <p>La méthode d'achat:</p>
-                        <p>Toutes vos statistiques commencent à 8 et disposer de 27 points à dépenser. Les scores de statistiques de 9 à 13 coûtent 1 point, alors que les scores 14 et 15 coûtent 2 points. Il n'est pas possible de dépasser un score de 15.</p>
-                        <p>Selon votre maître de jeu, vous serez libre de choisir la méthode de distribution des statistiques. Il est notable que la méthode des lancés et généralement la plus efficace car elle offre le plus de statistiques, si la chance vous souris.</p>
-                        <p>Vous avez maintenant vos statistiques. Notez que le modifieur (valeur indiquer au dessus de la valeur inscrite) est automatiquement calculer. Pour connaitre la valeur du modifieur, il faut appliquer la formule suivante: (valeur de la statistique - 10)/2.</p>
-                        <p>La classe défini quels jet de sauvegarde vous bénéficier.</p>
-                        <p>Un total de deux compétences pour être sélectionner en plus des compétences défini par la race et classe.</p>
-                    </div>
-                    }
-                </div>
-                <div className={style.section}>
-                    <h3 onClick={dropDownThree}>Partie 3: Le reste des statistiques.</h3>
-                    {isOpenThree &&
-                    <div>
-                        <p>La classe d'armure correspond à 10 plus le modifieur de dextérité plus les éventuelles armures.</p>
-                        <p>L'initiative correspond à la valeur du modifieur de dextérité.</p>
-                        <p>La vitesse dépend de votre race.</p>
-                        <p>La santé est calculer en fonction de la classe. Pour savoir le dé correspondant, consulter le livre des joueurs.</p>
-                        <p>Au niveau 1, la santé correspond à la valeur maximum du dé de vie plus le modificateur.</p>
-                        <p>A chaque niveau, il est possible de soit lancer un dé de vie pour gagner autant de santé que le résultat, soit choisir la moyenne (d6: 4, d8: 5, D10: 6, D12: 7).</p>
-                        <p>Les points de vie temporaires correspondent à divers bonus qui peuvent être lancer en faveur du joueur (comme des sorts ou des festins offert par le gentil MJ). Attention, car les bonus ne sont pas cumulable.</p>
-                    </div>
-                    }
-                </div>
-                <div className={style.section}>
-                    <h3 onClick={dropDownFour}>Partie 4: Les jets de sauvegarde contre la mort.</h3>
-                    {isOpenFour &&
-                    <div>
-                        <p>Elle se décompose en deux partie: les succès et les echecs.</p>
-                        <p>Quand votre personnage tombe sous les 0 points de vie, il doit alors lancer chaque tour suivant un dé 20. Si le joueur fait au moins 10, c'est un succès. Une réussite critique donne trois succès alors qu'un echec critique donne 2 éches.</p>
-                        <p>Si un joueur à terre réussi à obtenir 3 succès, il se relève alors avec un point de vie. Si il s'agit de 3 échecs, référencer vous à la partie 1 de ce guide.</p>
-                    </div>
-                    }
-                </div>
-                <div className={style.section}>
-                    <h3 onClick={dropDownFive}>Partie 5: Le reste de la fiche.</h3>
-                    {isOpenFive &&
-                    <div>
-                        <p>Cette partie s'appel plus communément "copier coller le contenu du livre de joueur".</p>
-                        <p>Dans les maîtrises et langue, incrivez les maitrises et langues donner par votre race et classe.</p>
-                        <p>Pour attaques et sorts, inscrivez l'équipement donner par votre classe / race</p>
-                        <p>Pour l'équipement et les pièces (cuivre, argent, électrum, or et platine), inscrivez l'équipement donner par votre classe / race</p>
-                        <p>Pour les capacités et traits, inscrivez pour une dernière fois les élèments donner par votre classe / race</p>
-                        <p>Le bonus de maîtrise est un valeur fixe. Elle commence à 2 au niveau 1 et monte de 1 point tout les 4 niveaux</p>
-                    </div>
-                    }
-                </div>
-                <div className={style.section}>
-                    <h3 onClick={dropDownSix}>Partie 6: Personnalité du personnage.</h3>
-                    {isOpenSix &&
-                    <div>
-                        <p>Il est fort probable que vous ayez déjà vu l'anciennement charte d'alignement. Celle-ci à disparu en faveur de ce nouveau système offrant plus de liberté d'expression au joueur.</p>
-                        <p>Les cases sont assez intuitive en elle même: Traits de personnalité, idéaux, liens et défauts correspondent aux caractéristiques de votre personnage. Vous y êtes libre d'y d'écrire la personnalité du personnage que vous incanerez. Certains joueurs peuvent avoir du mal à remplir ces cases car ils ne savent pas encore comment ils vont intéragir avec le monde offert par le maitre de jeu. Ce n'est pas grave, car c'est case ne sont cruciale au déroulement d'une partie. Cependant, les remplirs en cours d'aventure au fur et mesure que vous contruisez l'histoire avec les différents joueurs et maitre de jeu est une bonne chose à faire.</p>
-                    </div>
-                    }
-                </div>
-            </div>
+
         </div>
     )
 }
