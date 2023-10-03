@@ -2,24 +2,28 @@ import React from 'react';
 import style from './Pokemon.module.scss';
 import logoPokemon from '../../Ressources/LogoPokemon.png';
 import backgroundImage from '../../Ressources/Pikachu.png';
+import bandepokemon from '../../Ressources/BandePokemon.png'
+import typepokemon from '../../Ressources/TypePokemon.png'
 
 const Pokemon = () => {
   return (
     <div className={style.Pokemon}>
-        <img src={logoPokemon} alt="LogoPokemon" className={style.PokemonImage} />
+        <img src={logoPokemon} alt="LogoPokemon" className={style.PokemonImage}/>
+        
 
       <h2 className={style.SectionTitle}>Choisissez votre Pokémon</h2>
       <p className={style.Paragraph}>
         Une des premières choses à faire dans votre aventure sera de choisir votre premier partenaire Pokémon. Chaque jeu vous offrira un choix d’espèces de Pokémon différentes, mais dans la majorité des cas vous aurez à choisir entre un Pokémon de type Feu, un Pokémon de type Plante et un Pokémon de type Eau. Votre choix pourra faciliter ou compliquer le début du jeu, mais très vite, vous aurez un éventail de Pokémon de tous types à votre disposition. N’hésitez donc pas à adopter celui que vous trouvez le plus mignon, et partez à l'aventure ! Sachez toutefois que ces trois espèces de Pokémon sont introuvables à l’état sauvage, et que vous devrez donc les échanger si vous les voulez toutes. Vous en apprendrez davantage sur l’échange de Pokémon plus loin dans cet article.
       </p>
 
-      <div className={style.Pokemon} style={{ backgroundImage: `url(${backgroundImage})` }}></div>
-
+      <img src={bandepokemon} alt="ChoixPokemon" />
 
       <h2 className={style.SectionTitle}>Qu'est-ce qu’un type de Pokémon ?</h2>
       <p className={style.Paragraph}>
         Chaque Pokémon possède un ou deux types parmi un choix de 18 : Normal, Feu, Eau, Plante, Électrik, Glace, Combat, Poison, Sol, Vol, Psy, Insecte, Roche, Spectre, Dragon, Ténèbres, Acier ou Fée. Chaque type a des avantages et des faiblesses contre d’autres types. Par exemple, les Pokémon Feu ont un avantage sur les Pokémon de type Plante, mais ils sont faibles contre les Pokémon de type Eau. Un des défis auxquels vous devrez faire face dans votre aventure sera de vous construire une équipe équilibrée, capable d’affronter tous les adversaires.
       </p>
+
+      <img src={typepokemon} alt="LestypePokemon" />
 
       <h2 className={style.SectionTitle}>Explorez le monde autour de vous</h2>
       <p className={style.Paragraph}>
@@ -32,6 +36,8 @@ const Pokemon = () => {
 La stat de Vitesse des Pokémon au combat définit presque toujours quel Pokémon attaque en premier, à moins qu’une capacité prioritaire ne prenne le pas sur les autres. Les actions de votre personnage, comme utiliser un objet ou changer de Pokémon actif, auront toujours lieu avant que l'autre Pokémon n'attaque.
 Pendant les combats contre des Pokémon sauvages, il vous faudra choisir entre battre votre adversaire et l'attraper. Dans les deux cas, vous devrez abaisser ses PV en l’attaquant, tout en vous assurant que ceux de vos Pokémon ne diminuent pas trop.
       </p>
+
+      <img src={backgroundImage} alt="Pikachu" />
 
       <h2 className={style.SectionTitle}>Capacités de statut et altérations de statut</h2>
       <p className={style.Paragraph}>
