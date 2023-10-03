@@ -3,35 +3,44 @@ footer{
     flex-flow: column;
     align-items: center;
     justify-content: center;
-    > .logoButtons{
+    .logoButtons{
         display: flex;
         flex-flow: row;
         margin: 1rem;
-        > ul{
+        ul{
         display: flex;
         flex-flow: column;
-        gap: 1.2rem;
+        gap: 1.5rem;
         list-style: none;
-        > li{
-            > a{
+        li{
+            a{
                 text-decoration: none;
                 color: rgb(129, 129, 129);
                 font-weight: 500;
             }
         }
     }
-    > img{
+    img{
         width: 10rem;
         opacity: 0.5;
     };
     }
 
-    > p{
+    p{
         color: black;
         margin-bottom: 1rem;
     }
 }
 
-
-
-
+.reseaux{
+    display: flex;
+    flex-flow: column;
+    text-decoration: none;
+    gap: 0.5rem;
+    color: rgb(129, 129, 129);
+    margin: 0 0 0 5rem;
+    font-size: 1.5rem;
+    a{
+        color: rgb(129, 129, 129);
+    }
+}

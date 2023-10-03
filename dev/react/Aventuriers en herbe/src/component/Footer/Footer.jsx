@@ -5,6 +5,7 @@ import Button from "../Button/Button"
 import {FaFacebookF} from "react-icons/Fa"
 import {BiLogoInstagramAlt} from "react-icons/Bi"
 import {FaDiscord} from "react-icons/Fa"
+import {FaXTwitter} from "react-icons/Fa6"
 
 function Footer(){
 
@@ -23,10 +24,10 @@ function Footer(){
                     <li><Link to ="/cgu" onClick={scrollUp}>Conditions Général d'Utilisation</Link></li>
                 </ul>
                 <div className={style.reseaux}>
-                    <FaFacebookF/>
-                    <BiLogoInstagramAlt/>
-                    <FaDiscord/>
-
+                    <Link to ="https://www.facebook.com/?locale=fr_FR" target="blank1"><FaFacebookF/></Link>
+                    <Link to ="https://www.instagram.com/" target="blank2"><BiLogoInstagramAlt/></Link>
+                    <Link to ="https://twitter.com/?lang=fr" target="blank3"><FaXTwitter/></Link>
+                    <Link to ="https://discord.com/" target="blank4"><FaDiscord/></Link>
                 </div>
             </div>
             <p>Aventuriers en herbe &copy;</p>
