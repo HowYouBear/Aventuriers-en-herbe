@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './LanceurDes.module.scss';
+import Button from "../../component/Button/Button"
 
 function LanceurDes() {
   const [valeurDes, setValeurDes] = useState('');
@@ -50,7 +51,7 @@ function LanceurDes() {
           <input className={styles.modificateur} type="number" name='modif' id='modificateur' defaultValue="0"/>
         </div>
       </div>
-      <button type="button" onClick={lancer}>Lancer</button>
+      <Button onClick={lancer}>Lancer</Button>
       <div className={styles.resultatAll}>
         <label htmlFor="resultat">Résultat</label>
         <div className={styles.resultat} id="resultat">{valeurDes}</div>

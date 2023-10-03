@@ -1,5 +1,6 @@
 import style from "./Contact.module.scss"
 import { useForm } from "react-hook-form"
+import Button from "../../component/Button/Button"
 
 
 function Contact(){
@@ -25,7 +26,7 @@ function Contact(){
                 <label htmlFor="message">Message</label>
                 <textarea className={style.zoneMessage} name='message' type='text' {...register("message", { required: true })} cols="30" rows="10" ></textarea>
                 {errors.message && <span>Un contenu de message est nécessaire</span>}
-                <button type="submit">Connexion</button>
+                <Button type="submit">Envoyer</Button>
             </form>
         </div>
     )

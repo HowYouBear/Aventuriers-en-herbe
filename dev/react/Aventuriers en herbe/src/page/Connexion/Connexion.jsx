@@ -1,5 +1,6 @@
 import styles from './Connexion.module.scss'
 import { useForm } from "react-hook-form"
+import Button from "../../component/Button/Button"
 
 function Connexion(){
 
@@ -32,7 +33,7 @@ function onSubmit2 (data2){
                 <label htmlFor="password">Mot de passe</label>
                 <input name='password' type='password' placeholder='Mot de passe' {...register("password", { required: true })} />
                 {errors.password && <span>Un mot de passe est nécessaire</span>}
-                <button type="submit">Connexion</button>
+                <Button type="submit">Connexion</Button>
             </form>
 
         <form onSubmit={handleSubmit2(onSubmit2)} className={styles.inscription}>
@@ -49,7 +50,7 @@ function onSubmit2 (data2){
             <label htmlFor="confPassword2">Confirmation de mot de passe</label>
             <input name='confPassword2' {...register2("confPassword2", { required: true })}  />
             {errors2.confPassword2 && <span>Un mot de passe est nécessaire</span>}
-            <button type="submit">Créer</button>
+            <Button type="submit">Créer</Button>
         </form>
         </div>
     )
