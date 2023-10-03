@@ -1,0 +1,13 @@
+.buttonNav{
+    cursor: pointer;
+    padding: 5% 0;
+    margin: 0;
+    width: 100px;
+    background-color: var(--ColorOne);
+    color: white;
+    font-weight: 600;
+}
+
+.buttonNav:hover{
+    background-color: var(--ColorTwo);
+}

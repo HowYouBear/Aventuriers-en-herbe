@@ -8,3 +8,7 @@ button{
     border: 1px solid white;
     font-weight: 600;
 }
+
+button:hover{
+    background-color: var(--ColorOne);
+}
