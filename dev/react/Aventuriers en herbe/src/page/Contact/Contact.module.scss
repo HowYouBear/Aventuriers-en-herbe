@@ -12,15 +12,6 @@
         flex-direction: column;
         width: 25rem;
         align-items: center;
-        > button{
-            cursor: pointer;
-            font-weight: 700;
-            margin: 1rem;
-            padding: 0.5rem;
-            border: 2px solid white;
-            background-color: var(--ColorTwo);
-            color: white;
-        }
         > label{
             margin: 1rem 0 0 0;
         }
