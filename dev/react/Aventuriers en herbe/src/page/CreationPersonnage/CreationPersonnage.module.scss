@@ -5,13 +5,18 @@
     }
 }
 
+.fichePersonnageFrame{
+    display: flex;
+    justify-content: center;
+}
+
 .fichePersonnage{
     display: grid;
-    background-color: white;
     grid-template-columns: repeat(3, 350px);
 }
 
 .firstRow{
+    background-color: white;
     padding: 0.5rem;
     .inspirationProficiency{
         padding: 0.7rem 1rem;
@@ -93,6 +98,7 @@
 }
 
 .secondRow{
+    background-color: white;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -279,6 +285,7 @@
 }
 
 .thridRow{
+    background-color: white;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -322,14 +329,17 @@
 }
 
 .retourErreur{
+    padding: 0 7rem;
     > p:first-child{
         text-align: center;
     }
 }
 
 .section{
+    width: 60rem;
     padding: 1rem;
     > h3{
-        padding: 1rem;
+        margin: 1rem;
+        border-bottom: 1px solid black;
     }
 }

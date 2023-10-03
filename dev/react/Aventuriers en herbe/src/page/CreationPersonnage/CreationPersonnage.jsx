@@ -65,328 +65,361 @@ function CreationPersonnage(){
         }
     }, [charisma])
 
+    const [isOpenOne, setIsOpenOne] = useState(false);
+    function dropDownOne(){
+        setIsOpenOne((isOpenOne) => !isOpenOne);
+    }
+
+    const [isOpenTwo, setIsOpenTwo] = useState(false);
+    function dropDownTwo(){
+        setIsOpenTwo((isOpenTwo) => !isOpenTwo);
+    }
+
+    const [isOpenThree, setIsOpenThree] = useState(false);
+    function dropDownThree(){
+        setIsOpenThree((isOpenThree) => !isOpenThree);
+    }
+
+    const [isOpenFour, setIsOpenFour] = useState(false);
+    function dropDownFour(){
+        setIsOpenFour((isOpenFour) => !isOpenFour);
+    }
+
+    const [isOpenFive, setIsOpenFive] = useState(false);
+    function dropDownFive(){
+        setIsOpenFive((isOpenFive) => !isOpenFive);
+    }
+
+    const [isOpenSix, setIsOpenSix] = useState(false);
+    function dropDownSix(){
+        setIsOpenSix((isOpenSix) => !isOpenSix);
+    }
+
     return(
         <div className={style.creationPersonnageFrame}>
+
             <p>Remplissez la fiche personnage si-dessous et voyez en retour (en-dessous de la fiche personnage) les potentielles erreurs inscsrites</p>
-            <div className={style.fichePersonnage}>
-                <div className={style.firstRow}>
-                    <div className={style.inspirationProficiency}>
-                        <div>
-                            <input type="text" className={style.statModifier}/>
-                            <p>Bonus de maîtrise</p>
+            <div className={style.fichePersonnageFrame}>
+                <div className={style.fichePersonnage}>
+                    <div className={style.firstRow}>
+                        <div className={style.inspirationProficiency}>
+                            <div>
+                                <input type="text" className={style.statModifier}/>
+                                <p>Bonus de maîtrise</p>
+                            </div>
+                            <div>
+                                <input type="text" className={style.statModifier}/>
+                                <p>Inspiration</p>
+                            </div>
+                            <div>
+                                <input type="text" className={style.statModifier}/>
+                                <p>Sagesse (perception) passive</p>
+                            </div>
                         </div>
-                        <div>
-                            <input type="text" className={style.statModifier}/>
-                            <p>Inspiration</p>
+                        <div className={style.mainStatistiques}>
+                            <div className={style.statistique}>
+                                <div>
+                                    <input type="text" disabled
+                                    className={style.statModifier}
+                                    value={strenghtModifier}/>
+                                    
+                                    <input 
+                                    type="text" 
+                                    className={style.statValue}
+                                    value={strenght}
+                                    onChange={(e) => setStrenght(e.target.value.replace(/\D/g, ''))}
+                                    />
+                                    <p>Force</p>
+                                </div>
+                                <div className={style.skills}>
+                                    <div>
+                                        <input type="checkbox" name="" id="" />
+                                        <p>- Jet de sauvegarde</p>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="" id="" />
+                                        <p>- Athlétisme</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={style.statistique}>
+                                <div>
+                                    <input type="text" disabled
+                                    className={style.statModifier}
+                                    value={dexterityModifier}/>
+                                    <input type="text"
+                                    className={style.statValue}
+                                    value={dexterity}
+                                    onChange={(e) => setdexterity(e.target.value)}/>
+                                    <p>Agilité</p>
+                                </div>
+                                <div className={style.skills}>
+                                    <div>
+                                        <input type="checkbox" name="" id="" />
+                                        <p>- Jet de sauvegarde</p>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="" id="" />
+                                        <p>- Acrobatie</p>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="" id="" />
+                                        <p>- Discrétion</p>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="" id="" />
+                                        <p>- Escamotage</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={style.statistique}>
+                                <div>
+                                    <input type="text" disabled
+                                    className={style.statModifier}
+                                    value={consitutionModifier}/>
+                                    <input type="text"
+                                    className={style.statValue}
+                                    value={consitution}
+                                    onChange={(e) => setConsitution(e.target.value)}/>
+                                    <p>Constitution</p>
+                                </div>
+                                <div className={style.skills}>
+                                    <div>
+                                        <input type="checkbox" name="" id="" />
+                                        <p>- Jet de sauvegarde</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={style.statistique}>
+                                <div>
+                                    <input type="text" disabled
+                                    className={style.statModifier}
+                                    value={intelligenceModifier}/>
+                                    <input type="text"
+                                    className={style.statValue}
+                                    value={intelligence}
+                                    onChange={(e) => setIntelligence(e.target.value)}/>
+                                    <p>Intelligence</p>
+                                </div>
+                                <div className={style.skills}>
+                                    <div>
+                                        <input type="checkbox" name="" id="" />
+                                        <p>- Jet de sauvegarde</p>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="" id="" />
+                                        <p>- Arcane</p>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="" id="" />
+                                        <p>- Histoire</p>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="" id="" />
+                                        <p>- Investigation</p>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="" id="" />
+                                        <p>- Nature</p>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="" id="" />
+                                        <p>- Religion</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={style.statistique}>
+                                <div>
+                                    <input type="text" disabled
+                                    className={style.statModifier}
+                                    value={wisdomModifier}/>
+                                    <input type="text"
+                                    className={style.statValue}
+                                    value={wisdom}
+                                    onChange={(e) => setWisdom(e.target.value)}/>
+                                    <p>Sagesse</p>
+                                </div>
+                                <div className={style.skills}>
+                                    <div>
+                                        <input type="checkbox" name="" id="" />
+                                        <p>- Jet de sauvegarde</p>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="" id="" />
+                                        <p>- Dressage</p>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="" id="" />
+                                        <p>- Médecine</p>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="" id="" />
+                                        <p>- Perception</p>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="" id="" />
+                                        <p>- Perspicacité</p>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="" id="" />
+                                        <p>- Représentation</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={style.statistique}>
+                                <div>
+                                    <input type="text" disabled
+                                    className={style.statModifier}
+                                    value={charismaModifier}/>
+                                    <input type="text"
+                                    className={style.statValue}
+                                    value={charisma}
+                                    onChange={(e) => setCharisma(e.target.value)}/>
+                                    <p>Charisme</p>
+                                </div>
+                                <div className={style.skills}>
+                                    <div>
+                                        <input type="checkbox" name="" id="" />
+                                        <p>- Jet de sauvegarde</p>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="" id="" />
+                                        <p>- Athlétisme</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <input type="text" className={style.statModifier}/>
-                            <p>Sagesse (perception) passive</p>
+                        <div className={style.otherMasteries}>
+                            <p>Autres maîtrises et langues</p>
+                            <textarea name="" id=""></textarea>
                         </div>
                     </div>
-                    <div className={style.mainStatistiques}>
-                        <div className={style.statistique}>
+                    <div className={style.secondRow}>  
+                        <div className={style.modifier}>
+                            <div className={style.armor}>
+                                <input type="text" />
+                                <p>CA</p>
+                            </div>
+                            <div className={style.initiative}>
+                                <input type="text" />
+                                <p>Initiative</p>
+                            </div>
+                            <div className={style.speed}>
+                                <input type="text" />
+                                <p>Vitesse</p>
+                            </div>
+                        </div>
+                        <div className={style.healthStatistiques}>
                             <div>
-                                <input type="text" disabled
-                                className={style.statModifier}
-                                value={strenghtModifier}/>
-                                
-                                <input 
-                                type="text" 
-                                className={style.statValue}
-                                value={strenght}
-                                onChange={(e) => setStrenght(e.target.value.replace(/\D/g, ''))}
-                                />
-                                <p>Force</p>
-                            </div>
-                            <div className={style.skills}>
                                 <div>
-                                    <input type="checkbox" name="" id="" />
-                                    <p>- Jet de sauvegarde</p>
+                                    <p>Points de vie max</p>
+                                    <input type="text" name="" id="" />
                                 </div>
-                                <div>
-                                    <input type="checkbox" name="" id="" />
-                                    <p>- Athlétisme</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={style.statistique}>
-                            <div>
-                                <input type="text" disabled
-                                className={style.statModifier}
-                                value={dexterityModifier}/>
-                                <input type="text"
-                                className={style.statValue}
-                                value={dexterity}
-                                onChange={(e) => setdexterity(e.target.value)}/>
-                                <p>Agilité</p>
-                            </div>
-                            <div className={style.skills}>
-                                <div>
-                                    <input type="checkbox" name="" id="" />
-                                    <p>- Jet de sauvegarde</p>
-                                </div>
-                                <div>
-                                    <input type="checkbox" name="" id="" />
-                                    <p>- Acrobatie</p>
-                                </div>
-                                <div>
-                                    <input type="checkbox" name="" id="" />
-                                    <p>- Discrétion</p>
-                                </div>
-                                <div>
-                                    <input type="checkbox" name="" id="" />
-                                    <p>- Escamotage</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={style.statistique}>
-                            <div>
-                                <input type="text" disabled
-                                className={style.statModifier}
-                                value={consitutionModifier}/>
-                                <input type="text"
-                                className={style.statValue}
-                                value={consitution}
-                                onChange={(e) => setConsitution(e.target.value)}/>
-                                <p>Constitution</p>
-                            </div>
-                            <div className={style.skills}>
-                                <div>
-                                    <input type="checkbox" name="" id="" />
-                                    <p>- Jet de sauvegarde</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={style.statistique}>
-                            <div>
-                                <input type="text" disabled
-                                className={style.statModifier}
-                                value={intelligenceModifier}/>
-                                <input type="text"
-                                className={style.statValue}
-                                value={intelligence}
-                                onChange={(e) => setIntelligence(e.target.value)}/>
-                                <p>Intelligence</p>
-                            </div>
-                            <div className={style.skills}>
-                                <div>
-                                    <input type="checkbox" name="" id="" />
-                                    <p>- Jet de sauvegarde</p>
-                                </div>
-                                <div>
-                                    <input type="checkbox" name="" id="" />
-                                    <p>- Arcane</p>
-                                </div>
-                                <div>
-                                    <input type="checkbox" name="" id="" />
-                                    <p>- Histoire</p>
-                                </div>
-                                <div>
-                                    <input type="checkbox" name="" id="" />
-                                    <p>- Investigation</p>
-                                </div>
-                                <div>
-                                    <input type="checkbox" name="" id="" />
-                                    <p>- Nature</p>
-                                </div>
-                                <div>
-                                    <input type="checkbox" name="" id="" />
-                                    <p>- Religion</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={style.statistique}>
-                            <div>
-                                <input type="text" disabled
-                                className={style.statModifier}
-                                value={wisdomModifier}/>
-                                <input type="text"
-                                className={style.statValue}
-                                value={wisdom}
-                                onChange={(e) => setWisdom(e.target.value)}/>
-                                <p>Sagesse</p>
-                            </div>
-                            <div className={style.skills}>
-                                <div>
-                                    <input type="checkbox" name="" id="" />
-                                    <p>- Jet de sauvegarde</p>
-                                </div>
-                                <div>
-                                    <input type="checkbox" name="" id="" />
-                                    <p>- Dressage</p>
-                                </div>
-                                <div>
-                                    <input type="checkbox" name="" id="" />
-                                    <p>- Médecine</p>
-                                </div>
-                                <div>
-                                    <input type="checkbox" name="" id="" />
-                                    <p>- Perception</p>
-                                </div>
-                                <div>
-                                    <input type="checkbox" name="" id="" />
-                                    <p>- Perspicacité</p>
-                                </div>
-                                <div>
-                                    <input type="checkbox" name="" id="" />
-                                    <p>- Représentation</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={style.statistique}>
-                            <div>
-                                <input type="text" disabled
-                                className={style.statModifier}
-                                value={charismaModifier}/>
-                                <input type="text"
-                                className={style.statValue}
-                                value={charisma}
-                                onChange={(e) => setCharisma(e.target.value)}/>
-                                <p>Charisme</p>
-                            </div>
-                            <div className={style.skills}>
-                                <div>
-                                    <input type="checkbox" name="" id="" />
-                                    <p>- Jet de sauvegarde</p>
-                                </div>
-                                <div>
-                                    <input type="checkbox" name="" id="" />
-                                    <p>- Athlétisme</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={style.otherMasteries}>
-                        <p>Autres maîtrises et langues</p>
-                        <textarea name="" id=""></textarea>
-                    </div>
-                </div>
-                <div className={style.secondRow}>  
-                    <div className={style.modifier}>
-                        <div className={style.armor}>
-                            <input type="text" />
-                            <p>CA</p>
-                        </div>
-                        <div className={style.initiative}>
-                            <input type="text" />
-                            <p>Initiative</p>
-                        </div>
-                        <div className={style.speed}>
-                            <input type="text" />
-                            <p>Vitesse</p>
-                        </div>
-                    </div>
-                    <div className={style.healthStatistiques}>
-                        <div>
-                            <div>
-                                <p>Points de vie max</p>
                                 <input type="text" name="" id="" />
+                                <p>Points de vie actuels</p>
                             </div>
-                            <input type="text" name="" id="" />
-                            <p>Points de vie actuels</p>
-                        </div>
-                        <div>
-                            <input type="text" name="" id="" />
-                            <p>Points de vie temporaires</p>
-                        </div>
-                    </div>
-                    <div className={style.healthDeath}>
-                        <div>
                             <div>
-                                <p>Total</p>
                                 <input type="text" name="" id="" />
+                                <p>Points de vie temporaires</p>
                             </div>
-                            <input type="text" name="" id="" />
-                            <p>Dés de vie</p>
                         </div>
-                        <div>
+                        <div className={style.healthDeath}>
                             <div>
-                                <p>Succès</p>
-                                <input type="checkbox" name="" id="" /><span>=</span>
-                                <input type="checkbox" name="" id="" /><span>=</span>
-                                <input type="checkbox" name="" id="" />
+                                <div>
+                                    <p>Total</p>
+                                    <input type="text" name="" id="" />
+                                </div>
+                                <input type="text" name="" id="" />
+                                <p>Dés de vie</p>
                             </div>
                             <div>
-                                <p>Echecs</p>
-                                <input type="checkbox" name="" id="" /><span>=</span>
-                                <input type="checkbox" name="" id="" /><span>=</span>
-                                <input type="checkbox" name="" id="" />
+                                <div>
+                                    <p>Succès</p>
+                                    <input type="checkbox" name="" id="" /><span>=</span>
+                                    <input type="checkbox" name="" id="" /><span>=</span>
+                                    <input type="checkbox" name="" id="" />
+                                </div>
+                                <div>
+                                    <p>Echecs</p>
+                                    <input type="checkbox" name="" id="" /><span>=</span>
+                                    <input type="checkbox" name="" id="" /><span>=</span>
+                                    <input type="checkbox" name="" id="" />
+                                </div>
+                                <p>Jets de sauvegarde CONTRE LA MORT</p>
                             </div>
-                            <p>Jets de sauvegarde CONTRE LA MORT</p>
+                        </div>
+                        <div className={style.attackSpell}>
+                            <div>
+                                <p>Nom</p>
+                                <p>Bonus ATT</p>
+                                <p>Dégâts / Type</p>
+                                <input type="text" />
+                                <input type="text" />
+                                <input type="text" />
+                                <input type="text" />
+                                <input type="text" />
+                                <input type="text" />
+                                <input type="text" />
+                                <input type="text" />
+                                <input type="text" />
+                            </div>
+                            <textarea name="" id=""></textarea>
+                            <p>Attaques et sorts</p>
+                        </div>
+                        <div className={style.equipment}>
+                            <div>
+                                <div>
+                                    <div>
+                                        <p>PC</p>
+                                        <input type="text" />
+                                    </div>
+                                    <div>
+                                        <p>PA</p>
+                                        <input type="text" />
+                                    </div>
+                                    <div>
+                                        <p>PE</p>
+                                        <input type="text" />
+                                    </div>
+                                    <div>
+                                        <p>PO</p>
+                                        <input type="text" />
+                                    </div>
+                                    <div>
+                                        <p>PP</p>
+                                        <input type="text" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                                    <p>Equipement</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div className={style.attackSpell}>
-                        <div>
-                            <p>Nom</p>
-                            <p>Bonus ATT</p>
-                            <p>Dégâts / Type</p>
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
-                            <input type="text" />
-                        </div>
-                        <textarea name="" id=""></textarea>
-                        <p>Attaques et sorts</p>
-                    </div>
-                    <div className={style.equipment}>
-                        <div>
+                    <div className={style.thridRow}>
+                        <div className={style.character}>
                             <div>
-                                <div>
-                                    <p>PC</p>
-                                    <input type="text" />
-                                </div>
-                                <div>
-                                    <p>PA</p>
-                                    <input type="text" />
-                                </div>
-                                <div>
-                                    <p>PE</p>
-                                    <input type="text" />
-                                </div>
-                                <div>
-                                    <p>PO</p>
-                                    <input type="text" />
-                                </div>
-                                <div>
-                                    <p>PP</p>
-                                    <input type="text" />
-                                </div>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                                <p>Traits de personnalité</p>
                             </div>
                             <div>
                                 <textarea name="" id="" cols="30" rows="10"></textarea>
-                                <p>Equipement</p>
+                                <p>Idéaux</p>
+                            </div>
+                            <div>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                                <p>Liens</p>
+                            </div>
+                            <div>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                                <p>Défauts</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div className={style.thridRow}>
-                    <div className={style.character}>
-                        <div>
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
-                            <p>Traits de personnalité</p>
+                        <div className={style.capacity}>
+                            <textarea name="" id=""></textarea>
+                            <p>Capacités et traits</p>
                         </div>
-                        <div>
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
-                            <p>Idéaux</p>
-                        </div>
-                        <div>
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
-                            <p>Liens</p>
-                        </div>
-                        <div>
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
-                            <p>Défauts</p>
-                        </div>
-                    </div>
-                    <div className={style.capacity}>
-                        <textarea name="" id=""></textarea>
-                        <p>Capacités et traits</p>
                     </div>
                 </div>
             </div>
@@ -394,13 +427,16 @@ function CreationPersonnage(){
                 <p>Retour : {statCheck}</p>
                 <p>Comment construire sa fiche de personnage?</p>
                 <div className={style.section}>
-                    <h3>Partie 1: Choisir son personnage.</h3>
+                    <h3 onClick={dropDownOne}>Partie 1: Choisir son personnage.</h3>
+                    {isOpenOne && 
                     <div>
                         <p>Consulter le livre des joueurs pour consulter les différentes races et classes</p>
                     </div>
+                    }
                 </div>
                 <div className={style.section}>
-                    <h3>Partie 2: Choisir ses statistiques.</h3>
+                    <h3 onClick={dropDownTwo}>Partie 2: Choisir ses statistiques.</h3>
+                    {isOpenTwo &&
                     <div>
                         <p>Pour remplir la valeur d'une statistique, il suffit de remplir la case grise au-dessus de la statistique correspondante.</p>
                         <p>Une fois votre race et classe choisis vous devez définir vos statistiques. Pour cela il existe plusieurs méthode:</p>
@@ -415,9 +451,11 @@ function CreationPersonnage(){
                         <p>La classe défini quels jet de sauvegarde vous bénéficier.</p>
                         <p>Un total de deux compétences pour être sélectionner en plus des compétences défini par la race et classe.</p>
                     </div>
+                    }
                 </div>
                 <div className={style.section}>
-                    <h3>Partie 3: Le reste des statistiques.</h3>
+                    <h3 onClick={dropDownThree}>Partie 3: Le reste des statistiques.</h3>
+                    {isOpenThree &&
                     <div>
                         <p>La classe d'armure correspond à 10 plus le modifieur de dextérité plus les éventuelles armures.</p>
                         <p>L'initiative correspond à la valeur du modifieur de dextérité.</p>
@@ -427,17 +465,21 @@ function CreationPersonnage(){
                         <p>A chaque niveau, il est possible de soit lancer un dé de vie pour gagner autant de santé que le résultat, soit choisir la moyenne (d6: 4, d8: 5, D10: 6, D12: 7).</p>
                         <p>Les points de vie temporaires correspondent à divers bonus qui peuvent être lancer en faveur du joueur (comme des sorts ou des festins offert par le gentil MJ). Attention, car les bonus ne sont pas cumulable.</p>
                     </div>
+                    }
                 </div>
                 <div className={style.section}>
-                    <h3>Partie 4: Les jets de sauvegarde contre la mort.</h3>
+                    <h3 onClick={dropDownFour}>Partie 4: Les jets de sauvegarde contre la mort.</h3>
+                    {isOpenFour &&
                     <div>
                         <p>Elle se décompose en deux partie: les succès et les echecs.</p>
                         <p>Quand votre personnage tombe sous les 0 points de vie, il doit alors lancer chaque tour suivant un dé 20. Si le joueur fait au moins 10, c'est un succès. Une réussite critique donne trois succès alors qu'un echec critique donne 2 éches.</p>
                         <p>Si un joueur à terre réussi à obtenir 3 succès, il se relève alors avec un point de vie. Si il s'agit de 3 échecs, référencer vous à la partie 1 de ce guide.</p>
                     </div>
+                    }
                 </div>
                 <div className={style.section}>
-                    <h3>Partie 5: Le reste de la fiche.</h3>
+                    <h3 onClick={dropDownFive}>Partie 5: Le reste de la fiche.</h3>
+                    {isOpenFive &&
                     <div>
                         <p>Cette partie s'appel plus communément "copier coller le contenu du livre de joueur".</p>
                         <p>Dans les maîtrises et langue, incrivez les maitrises et langues donner par votre race et classe.</p>
@@ -446,13 +488,16 @@ function CreationPersonnage(){
                         <p>Pour les capacités et traits, inscrivez pour une dernière fois les élèments donner par votre classe / race</p>
                         <p>Le bonus de maîtrise est un valeur fixe. Elle commence à 2 au niveau 1 et monte de 1 point tout les 4 niveaux</p>
                     </div>
+                    }
                 </div>
                 <div className={style.section}>
-                    <h3>Partie 6: Personnalité du personnage.</h3>
+                    <h3 onClick={dropDownSix}>Partie 6: Personnalité du personnage.</h3>
+                    {isOpenSix &&
                     <div>
                         <p>Il est fort probable que vous ayez déjà vu l'anciennement charte d'alignement. Celle-ci à disparu en faveur de ce nouveau système offrant plus de liberté d'expression au joueur.</p>
                         <p>Les cases sont assez intuitive en elle même: Traits de personnalité, idéaux, liens et défauts correspondent aux caractéristiques de votre personnage. Vous y êtes libre d'y d'écrire la personnalité du personnage que vous incanerez. Certains joueurs peuvent avoir du mal à remplir ces cases car ils ne savent pas encore comment ils vont intéragir avec le monde offert par le maitre de jeu. Ce n'est pas grave, car c'est case ne sont cruciale au déroulement d'une partie. Cependant, les remplirs en cours d'aventure au fur et mesure que vous contruisez l'histoire avec les différents joueurs et maitre de jeu est une bonne chose à faire.</p>
                     </div>
+                    }
                 </div>
             </div>
         </div>
