@@ -1,0 +1,42 @@
+
+.cookie-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    background-color: #658597; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .cookie-popup-content {
+    color: white; 
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .cookie-popup button {
+    background-color: #dbdac0; 
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s; 
+    margin-left: 1rem;
+  }
+  
+  .cookie-popup button:hover {
+    background-color: #658597; 
+    color: #ffffff; 
+  }
+  
