@@ -18,6 +18,7 @@ import Pokemon from './page/Pokemon/Pokemon';
 import DonjonEtDragon from './page/DonjonEtDragon/DonjonEtDragon';
 import Bladerunner from './page/BladeRunner/BladeRunner';
 import Fallout from './page/Fallout/Fallout';
+import FFXIV from './page/FinalFantasyXIV/FinalFantasyXIV'
 
 
 
@@ -93,6 +94,11 @@ function App() {
         {
           path: "/fallout",
           element: <Fallout/>,
+          errorElement: <Erreur/>
+        },
+        {
+          path: "/ffxiv",
+          element: <FFXIV/>,
           errorElement: <Erreur/>
         },
       ],

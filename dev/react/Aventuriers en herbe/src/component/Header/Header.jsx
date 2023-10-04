@@ -20,7 +20,7 @@ function Header(){
                                     <li><Link to ="/Pokémon"><ButtonNav>Pokémon</ButtonNav></Link></li>
                                     <li><Link to ="/bladerunner"><ButtonNav>Bladerunner</ButtonNav></Link></li>
                                     <li><Link to ="/fallout"><ButtonNav>Fallout</ButtonNav></Link></li>
-                                    <li><ButtonNav>Final Fantasy XIV</ButtonNav></li>
+                                    <li><Link to ="/ffxiv"><ButtonNav>Final Fantasy XIV</ButtonNav></Link></li>
                                 </ul>
                             </div>
                         </div>

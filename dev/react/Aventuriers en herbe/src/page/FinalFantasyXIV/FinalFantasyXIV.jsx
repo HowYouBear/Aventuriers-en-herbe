@@ -7,7 +7,7 @@ import typeFFXIV from '../../Ressources/DragonFFXIV.png';
 
 const FFXIV = () => {
   return (
-    <div className={style.FinalFantasyXIV}>
+    <div className={style.frameFFXIV}>
         <img src={logoFFXIV} alt="LogoFFXIV" className={style.FFXIV}/>
         
 
@@ -52,4 +52,4 @@ const FFXIV = () => {
   );
 };
 
-export default FinalFantasyXIV
+export default FFXIV
