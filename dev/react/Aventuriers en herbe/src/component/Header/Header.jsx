@@ -10,7 +10,7 @@ function Header(){
             <div className={style.test}>
                 <nav>
                     <ul>
-                        <li><Link to = "/"><ButtonNav>Acceuil</ButtonNav></Link></li>
+                        <li><Link to = "/"><ButtonNav>Accueil</ButtonNav></Link></li>
                         <li><Link to = "/introduction"><ButtonNav>Introduction</ButtonNav></Link></li>
                         <div className={style.dropdown}>
                             <li><Link to = "/univers"><ButtonNav>Univers</ButtonNav></Link></li>
