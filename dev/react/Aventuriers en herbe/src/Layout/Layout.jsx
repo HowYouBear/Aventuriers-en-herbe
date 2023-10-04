@@ -3,7 +3,7 @@ import Footer from "../component/Footer/Footer";
 import Accueil from "../page/Accueil/Accueil";
 import style from "./Layout.module.scss"
 import CookiePopup from "../component/CookiePopup/CookiePopup";
-
+import ConnexionButton from "../component/ConnexionButton/ConnexionButton";
 import { useLocation, Outlet } from 'react-router-dom'
 
 function Layout() {
@@ -15,13 +15,12 @@ function Layout() {
       <Header />
       <div className={style.Content}>
         {pathname === "/" ? <Accueil /> : <Outlet />}
+        <ConnexionButton/>
         <CookiePopup />
       </div>
       <Footer />
       
     </div>
-    
-    
   )
 }
 
