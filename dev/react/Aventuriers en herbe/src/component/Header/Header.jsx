@@ -18,7 +18,7 @@ function Header(){
                                 <ul>
                                     <li><Link to ="/DonjonEtDragon"><ButtonNav>Donjon & Dragon</ButtonNav></Link></li>
                                     <li><Link to ="/Pokémon"><ButtonNav>Pokémon</ButtonNav></Link></li>
-                                    <li><ButtonNav>Bladerunner</ButtonNav></li>
+                                    <li><Link to ="/bladerunner"><ButtonNav>Bladerunner</ButtonNav></Link></li>
                                     <li><ButtonNav>Fallout</ButtonNav></li>
                                     <li><ButtonNav>Final Fantasy XIV</ButtonNav></li>
                                 </ul>
