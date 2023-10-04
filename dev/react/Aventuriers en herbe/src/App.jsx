@@ -17,6 +17,8 @@ import Outils from './page/Outils/Outils';
 import Pokemon from './page/Pokemon/Pokemon';
 import DonjonEtDragon from './page/DonjonEtDragon/DonjonEtDragon';
 import Bladerunner from './page/BladeRunner/BladeRunner';
+import Fallout from './page/Fallout/Fallout';
+
 
 
 
@@ -86,6 +88,11 @@ function App() {
         {
           path: "/bladerunner",
           element: <Bladerunner/>,
+          errorElement: <Erreur/>
+        },
+        {
+          path: "/fallout",
+          element: <Fallout/>,
           errorElement: <Erreur/>
         },
       ],
