@@ -58,7 +58,8 @@ function Fade({
     
     let style = {
         transitionDuration: `${duration}ms`,
-        transitionProperty: "opacity transform"}
+        transitionProperty: "opacity transform",
+        }
     if(state !== VISIBLE){
         if(from.opacity !== undefined){ // 0 != undefined
             style.opacity = from.opacity;

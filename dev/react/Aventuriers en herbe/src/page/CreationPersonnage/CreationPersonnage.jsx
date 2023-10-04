@@ -22,88 +22,157 @@ function CreationPersonnage(){
 
     const [charisma, setCharisma] = useState(0);
     const [charismaModifier, setCharismaModifier] = useState(0);
-
-    const [statCheck, setStatCheck] = useState('');
     
     useEffect(() =>{
         setStrenghtModifier(Math.floor((strenght-10)/2))
-        if(strenght > 18){
-            setStatCheck(statCheck + " Force")
-        }
     }, [strenght])
-    
+
     useEffect(() =>{
         setDexterityModifier(Math.floor((dexterity-10)/2))
-        if(dexterity > 18){
-            setStatCheck(statCheck + " Agilité")
-        }
     }, [dexterity])
-
     useEffect(() =>{
         setConsitutionModifier(Math.floor((consitution-10)/2))
-        if(consitution > 18){
-            setStatCheck(statCheck + " consitution")
-        }
     }, [consitution])
-
     useEffect(() =>{
         setIntelligenceModifier(Math.floor((intelligence-10)/2))
-        if(intelligence > 18){
-            setStatCheck(statCheck + " Intelligence")
-        }
     }, [intelligence])
-
     useEffect(() =>{
         setWisdomModifier(Math.floor((wisdom-10)/2))
-        if(wisdom > 18){
-            setStatCheck(statCheck + " Sagesse")
-        }
     }, [wisdom])
-
     useEffect(() =>{
         setCharismaModifier(Math.floor((charisma-10)/2))
-        if(charisma > 18){
-            setStatCheck(statCheck + " Charisme")
-        }
     }, [charisma])
 
     const [isOpenOne, setIsOpenOne] = useState(false);
     function dropDownOne(){
         setIsOpenOne((isOpenOne) => !isOpenOne);
     }
-
     const [isOpenTwo, setIsOpenTwo] = useState(false);
     function dropDownTwo(){
         setIsOpenTwo((isOpenTwo) => !isOpenTwo);
     }
-
     const [isOpenThree, setIsOpenThree] = useState(false);
     function dropDownThree(){
         setIsOpenThree((isOpenThree) => !isOpenThree);
     }
-
     const [isOpenFour, setIsOpenFour] = useState(false);
     function dropDownFour(){
         setIsOpenFour((isOpenFour) => !isOpenFour);
     }
-
     const [isOpenFive, setIsOpenFive] = useState(false);
     function dropDownFive(){
         setIsOpenFive((isOpenFive) => !isOpenFive);
     }
-
     const [isOpenSix, setIsOpenSix] = useState(false);
     function dropDownSix(){
         setIsOpenSix((isOpenSix) => !isOpenSix);
     }
 
+    const [valueMastery, setValueMastery] = useState('');
+    const masteryChange = event =>{
+        const result = event.target.value.replace(/\D/g, '');
+        setValueMastery(result);
+    }
+    const [valueInspire, setValueInspire] = useState('');
+    const inspireChange = event =>{
+        const result = event.target.value.replace(/\D/g, '');
+        setValueInspire(result);
+    }
+    const [valuePassiveWisdom, setValuePassiveWisdom] = useState('');
+    const passiveWisdomChange = event =>{
+        const result = event.target.value.replace(/\D/g, '');
+        setValuePassiveWisdom(result);
+    }
+    const [valueArmorClass, setValueArmorClass] = useState('');
+    const armorClassChange = event =>{
+        const result = event.target.value.replace(/\D/g, '');
+        setValueArmorClass(result);
+    }
+    const [valueInitiative, setValueInitiative] = useState('');
+    const initiativeChange = event =>{
+        const result = event.target.value.replace(/\D/g, '');
+        setValueInitiative(result);
+    }
+    const [valueSpeed, setValueSpeed] = useState('');
+    const speedChange = event =>{
+        const result = event.target.value.replace(/\D/g, '');
+        setValueSpeed(result);
+    }
+    const [valueMaxHealth, setValueMaxHealth] = useState('');
+    const maxHealthChange = event =>{
+        const result = event.target.value.replace(/\D/g, '');
+        setValueMaxHealth(result);
+    }
+    const [valueActualHealth, setValueActualHealth] = useState('');
+    const actualHealthChange = event =>{
+        const result = event.target.value.replace(/\D/g, '');
+        setValueActualHealth(result);
+    }
+    const [valueBonusHealth, setValueBonusHealth] = useState('');
+    const bonusHealthChange = event =>{
+        const result = event.target.value.replace(/\D/g, '');
+        setValueBonusHealth(result);
+    }
+
+    const [valueTotalHealthDice, setValueTotalHealthDice] = useState();
+    const totalHealthDiceChange = event =>{
+        const result = event.target.value.replace(/\D/g, '');
+        setValueTotalHealthDice(result);
+    }
+    const [valueHealthDice, setValueHealthDice] = useState();
+    const HealthDiceChange = event =>{
+        const r = event.target.value.replace(/\D/g, '');
+        setValueHealthDice(r);
+    }
+    
+    const [valueBonusAttackOne, setValueBonusAttackOne] = useState('');
+    const attackOneChange = event =>{
+        const result = event.target.value.replace(/\D/g, '');
+        setValueBonusAttackOne(result);
+    }
+    const [valueBonusAttackTwo, setValueBonusAttackTwo] = useState('');
+    const attackTwoChange = event =>{
+        const result = event.target.value.replace(/\D/g, '');
+        setValueBonusAttackTwo(result);
+    }   
+    const [valueBonusAttackThree, setValueBonusAttackThree] = useState('');
+    const attackThreeChange = event =>{
+        const result = event.target.value.replace(/\D/g, '');
+        setValueBonusAttackThree(result);
+    }
+    const [valuePC, setValuePC] = useState('');
+    const pCChange = event =>{
+        const result = event.target.value.replace(/\D/g, '');
+        setValuePC(result);
+    }
+    const [valuePA, setValuePA] = useState('');
+    const pAChange = event =>{
+        const result = event.target.value.replace(/\D/g, '');
+        setValuePA(result);
+    }
+    const [valuePE, setValuePE] = useState('');
+    const pEChange = event =>{
+        const result = event.target.value.replace(/\D/g, '');
+        setValuePE(result);
+    }
+    const [valuePG, setValuePG] = useState('');
+    const pGChange = event =>{
+        const result = event.target.value.replace(/\D/g, '');
+        setValuePG(result);
+    }
+    const [valuePP, setValuePP] = useState('');
+    const pPChange = event =>{
+        const result = event.target.value.replace(/\D/g, '');
+        setValuePP(result);
+    }
+
     return(
         <div className={style.creationPersonnageFrame}>
             <div className={style.retourErreur}>
-                <p>Comment construire sa fiche de personnage?</p>
+                <h3>Comment construire sa fiche de personnage?</h3>
                 <div className={style.section}>
                     <h3 onClick={dropDownOne}>Partie 1: Choisir son personnage.</h3>
-                    <Fade visible={isOpenOne} animateEnter={true}>
+                    <Fade visible={isOpenOne} animateEnter>
                         <Section text={
                         <div>
                             <p>Consulter le livre des joueurs pour consulter les différentes races et classes</p>
@@ -192,15 +261,24 @@ function CreationPersonnage(){
                     <div className={style.firstRow}>
                         <div className={style.inspirationProficiency}>
                             <div>
-                                <input type="text" className={style.statModifier}/>
+                                <input type="text" 
+                                value={valueMastery}
+                                onChange={masteryChange}
+                                className={style.statModifier}/>
                                 <p>Bonus de maîtrise</p>
                             </div>
                             <div>
-                                <input type="text" className={style.statModifier}/>
+                                <input type="text"
+                                value={valueInspire}
+                                onChange={inspireChange}
+                                className={style.statModifier}/>
                                 <p>Inspiration</p>
                             </div>
                             <div>
-                                <input type="text" className={style.statModifier}/>
+                                <input type="text"
+                                value={valuePassiveWisdom}
+                                onChange={passiveWisdomChange}
+                                className={style.statModifier}/>
                                 <p>Sagesse (perception) passive</p>
                             </div>
                         </div>
@@ -238,7 +316,7 @@ function CreationPersonnage(){
                                     <input type="text"
                                     className={style.statValue}
                                     value={dexterity}
-                                    onChange={(e) => setdexterity(e.target.value)}/>
+                                    onChange={(e) => setdexterity(e.target.value.replace(/\D/g, ''))}/>
                                     <p>Agilité</p>
                                 </div>
                                 <div className={style.skills}>
@@ -268,7 +346,7 @@ function CreationPersonnage(){
                                     <input type="text"
                                     className={style.statValue}
                                     value={consitution}
-                                    onChange={(e) => setConsitution(e.target.value)}/>
+                                    onChange={(e) => setConsitution(e.target.value.replace(/\D/g, ''))}/>
                                     <p>Constitution</p>
                                 </div>
                                 <div className={style.skills}>
@@ -286,7 +364,7 @@ function CreationPersonnage(){
                                     <input type="text"
                                     className={style.statValue}
                                     value={intelligence}
-                                    onChange={(e) => setIntelligence(e.target.value)}/>
+                                    onChange={(e) => setIntelligence(e.target.value.replace(/\D/g, ''))}/>
                                     <p>Intelligence</p>
                                 </div>
                                 <div className={style.skills}>
@@ -324,7 +402,7 @@ function CreationPersonnage(){
                                     <input type="text"
                                     className={style.statValue}
                                     value={wisdom}
-                                    onChange={(e) => setWisdom(e.target.value)}/>
+                                    onChange={(e) => setWisdom(e.target.value.replace(/\D/g, ''))}/>
                                     <p>Sagesse</p>
                                 </div>
                                 <div className={style.skills}>
@@ -362,7 +440,7 @@ function CreationPersonnage(){
                                     <input type="text"
                                     className={style.statValue}
                                     value={charisma}
-                                    onChange={(e) => setCharisma(e.target.value)}/>
+                                    onChange={(e) => setCharisma(e.target.value.replace(/\D/g, ''))}/>
                                     <p>Charisme</p>
                                 </div>
                                 <div className={style.skills}>
@@ -379,21 +457,30 @@ function CreationPersonnage(){
                         </div>
                         <div className={style.otherMasteries}>
                             <p>Autres maîtrises et langues</p>
-                            <textarea name="" id=""></textarea>
+                            <textarea/>
                         </div>
                     </div>
                     <div className={style.secondRow}>  
                         <div className={style.modifier}>
                             <div className={style.armor}>
-                                <input type="text" />
+                                <input type="text"
+                                value={valueArmorClass}
+                                onChange={armorClassChange}
+                                />
                                 <p>CA</p>
                             </div>
                             <div className={style.initiative}>
-                                <input type="text" />
+                                <input type="text"
+                                value={valueInitiative}
+                                onChange={initiativeChange}
+                                />
                                 <p>Initiative</p>
                             </div>
                             <div className={style.speed}>
-                                <input type="text" />
+                                <input type="text"
+                                value={valueSpeed}
+                                onChange={speedChange}
+                                />
                                 <p>Vitesse</p>
                             </div>
                         </div>
@@ -401,39 +488,53 @@ function CreationPersonnage(){
                             <div>
                                 <div>
                                     <p>Points de vie max</p>
-                                    <input type="text" name="" id="" />
+                                    <input type="text"
+                                    value={valueMaxHealth}
+                                    onChange={maxHealthChange}
+                                    />
                                 </div>
-                                <input type="text" name="" id="" />
+                                <input type="text"
+                                value={valueActualHealth}
+                                onChange={actualHealthChange}/>
                                 <p>Points de vie actuels</p>
                             </div>
                             <div>
-                                <input type="text" name="" id="" />
+                                <input type="text"
+                                value={valueBonusHealth}
+                                onChange={bonusHealthChange}/>
                                 <p>Points de vie temporaires</p>
                             </div>
                         </div>
+                        {/* FIX HEALTH */}
                         <div className={style.healthDeath}>
                             <div>
                                 <div>
                                     <p>Total</p>
-                                    <input type="text" name="" id="" />
+                                    <input type="text"
+                                    value={valueTotalHealthDice}
+                                    onChange={totalHealthDiceChange}
+                                    />
                                 </div>
-                                <input type="text" name="" id="" />
+                                <input type="text"
+                                value={valueHealthDice}
+                                onChange={HealthDiceChange}/>
                                 <p>Dés de vie</p>
                             </div>
                             <div>
                                 <div>
-                                    <p>Succès</p>
-                                    <input type="checkbox" name="" id="" /><span>=</span>
-                                    <input type="checkbox" name="" id="" /><span>=</span>
-                                    <input type="checkbox" name="" id="" />
+                                    <p className={style.deathSaves}>Succès</p>
+                                    <input type="checkbox"/><span>=</span>
+                                    <input type="checkbox"/><span>=</span>
+                                    <input type="checkbox"/>
                                 </div>
                                 <div>
-                                    <p>Echecs</p>
-                                    <input type="checkbox" name="" id="" /><span>=</span>
-                                    <input type="checkbox" name="" id="" /><span>=</span>
-                                    <input type="checkbox" name="" id="" />
+                                    <p className={style.deathSaves}>Echecs</p>
+                                    <input type="checkbox"/><span>=</span>
+                                    <input type="checkbox"/><span>=</span>
+                                    <input type="checkbox"/>
                                 </div>
-                                <p>Jets de sauvegarde CONTRE LA MORT</p>
+                                <p className={style.deathSavesTitle}>Jets de sauvegarde</p>
+                                <p>CONTRE LA MORT</p>
                             </div>
                         </div>
                         <div className={style.attackSpell}>
@@ -441,17 +542,29 @@ function CreationPersonnage(){
                                 <p>Nom</p>
                                 <p>Bonus ATT</p>
                                 <p>Dégâts / Type</p>
-                                <input type="text" />
-                                <input type="text" />
-                                <input type="text" />
-                                <input type="text" />
-                                <input type="text" />
-                                <input type="text" />
-                                <input type="text" />
-                                <input type="text" />
-                                <input type="text" />
+                                <input type="text"/>
+                                <input type="text"
+                                className={style.attackBonus}
+                                value={valueBonusAttackOne}
+                                onChange={attackOneChange}
+                                />
+                                <input type="text"/>
+                                <input type="text"/>
+                                <input type="text"
+                                className={style.attackBonus}
+                                value={valueBonusAttackTwo}
+                                onChange={attackTwoChange}
+                                />
+                                <input type="text"/>
+                                <input type="text"/>
+                                <input type="text"
+                                className={style.attackBonus}
+                                value={valueBonusAttackThree}
+                                onChange={attackThreeChange}
+                                />
+                                <input type="text"/>
                             </div>
-                            <textarea name="" id=""></textarea>
+                            <textarea/>
                             <p>Attaques et sorts</p>
                         </div>
                         <div className={style.equipment}>
@@ -459,23 +572,33 @@ function CreationPersonnage(){
                                 <div>
                                     <div>
                                         <p>PC</p>
-                                        <input type="text" />
+                                        <input type="text"
+                                        value={valuePC}
+                                        onChange={pCChange}/>
                                     </div>
                                     <div>
                                         <p>PA</p>
-                                        <input type="text" />
+                                        <input type="text"
+                                        value={valuePA}
+                                        onChange={pAChange}/>
                                     </div>
                                     <div>
                                         <p>PE</p>
-                                        <input type="text" />
+                                        <input type="text"
+                                        value={valuePE}
+                                        onChange={pEChange}/>
                                     </div>
                                     <div>
                                         <p>PO</p>
-                                        <input type="text" />
+                                        <input type="text"
+                                        value={valuePG}
+                                        onChange={pGChange}/>
                                     </div>
                                     <div>
                                         <p>PP</p>
-                                        <input type="text" />
+                                        <input type="text"
+                                        value={valuePP}
+                                        onChange={pPChange}/>
                                     </div>
                                 </div>
                                 <div>
