@@ -2,7 +2,6 @@ header{
     display: flex;
     align-items: center;    
     flex-direction: column;
-
     background-color: var(--ColorFour);
     min-height: 5rem;
     img{
@@ -50,3 +49,21 @@ header{
     background-color: var(--ColorTwo);
 }
 
+.buttonConnexion{
+    cursor: pointer;
+    padding: 5% 0;
+    margin: 0;
+    height: 1.6rem;
+    width: 70px;
+    background-color: var(--ColorOne);
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: none;
+    border-top: none;
+    color: white;
+    font-weight: 600;
+}
+
+.buttonConnexion:hover{
+    background-color: var(--ColorTwo);
+}

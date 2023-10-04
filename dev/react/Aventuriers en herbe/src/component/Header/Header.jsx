@@ -2,6 +2,7 @@ import style from "./Header.module.scss"
 import logo from "../../Ressources/logodesign8.png"
 import {Link} from "react-router-dom"
 import ButtonNav from "../../component/ButtonNav/ButtonNav"
+import {BiSolidUser} from "react-icons/bi"
 
 function Header(){
     return(
@@ -34,6 +35,7 @@ function Header(){
                     </div>
                     <li><Link to = "/contact"><ButtonNav>Contact</ButtonNav></Link></li>
                 </ul>
+                    <Link to ="/connexion"><button className={style.buttonConnexion}><BiSolidUser/></button></Link>
             </nav>
         </header>
     )
