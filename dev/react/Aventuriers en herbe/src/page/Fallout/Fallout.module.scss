@@ -1,0 +1,23 @@
+.frameFallout{
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center; 
+    img{
+        max-width: 50%; 
+        display: block;
+        margin: 20px auto; 
+    }
+    h2{
+        font-size: 24px;
+        color: #433838;
+        margin: 20px 0; 
+    }
+    p{
+        font-size: 16px;
+        line-height: 1.5;
+        color: #333;
+        margin-bottom: 20px;
+        padding: 0 20px; 
+    }
+}
