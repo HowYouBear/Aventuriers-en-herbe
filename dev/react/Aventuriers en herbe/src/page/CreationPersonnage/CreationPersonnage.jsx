@@ -4,10 +4,10 @@ import Section from "../../component/Section/Section";
 import Fade from "../../component/Fade/Fade";
 
 function CreationPersonnage(){
-
+//#region statistiques
     const [strenght, setStrenght] = useState(0);
     const [strenghtModifier, setStrenghtModifier] = useState(0);
-
+      
     const [dexterity, setdexterity] = useState(0);
     const [dexterityModifier, setDexterityModifier] = useState(0);
 
@@ -67,7 +67,9 @@ function CreationPersonnage(){
     function dropDownSix(){
         setIsOpenSix((isOpenSix) => !isOpenSix);
     }
+//#endregion
 
+//#region checkvalues
     const [valueMastery, setValueMastery] = useState('');
     const masteryChange = event =>{
         const result = event.target.value.replace(/\D/g, '');
@@ -165,6 +167,7 @@ function CreationPersonnage(){
         const result = event.target.value.replace(/\D/g, '');
         setValuePP(result);
     }
+//#endregion
 
     return(
         <div className={style.creationPersonnageFrame}>
@@ -175,7 +178,8 @@ function CreationPersonnage(){
                     <Fade visible={isOpenOne} animateEnter>
                         <Section text={
                         <div>
-                            <p>Consulter le livre des joueurs pour consulter les différentes races et classes</p>
+                            <p>Consulter <a href="https://online.anyflip.com/oerjk/rewd/mobile/index.html" target="blank">le livre des joueurs</a> pour découvrir les différentes races (page 17) et classes (page 45) de donjon et dragons.</p>
+                            <p>Chaque races et classes possèdent divers avantages et défaults. Le plus important, notamment pour les débutants, et de choisir une race qui nous plaît et que l'on aimerait incarner. N'oubliez pas, Donjons et Dragons et un jeu de rôle avant tout.</p>
                         </div>
                         }/>
                     </Fade>
@@ -187,13 +191,14 @@ function CreationPersonnage(){
                             <div>
                                 <p>Pour remplir la valeur d'une statistique, il suffit de remplir la case grise au-dessus de la statistique correspondante.</p>
                                 <p>Une fois votre race et classe choisis vous devez définir vos statistiques. Pour cela il existe plusieurs méthode:</p>
-                                <p>La méthode classique, le lancé de dé 6:</p>
+                                <p className={style.underline}>La méthode classique, le lancé de dé 6:</p>
                                 <p>Lancer 4d6 pour et retirer la valeur la plus faible pour définir votre statistique. C'est à dire que le score peut être de 3 à 18.</p>
-                                <p>La méthode de distribution standard:</p>
+                                <p className={style.underline}>La méthode de distribution standard:</p>
                                 <p>Distribuer les valeurs 15 14 13 10 8 parmis vos statistiques</p>
-                                <p>La méthode d'achat:</p>
+                                <p className={style.underline}>La méthode d'achat:</p>
                                 <p>Toutes vos statistiques commencent à 8 et disposer de 27 points à dépenser. Les scores de statistiques de 9 à 13 coûtent 1 point, alors que les scores 14 et 15 coûtent 2 points. Il n'est pas possible de dépasser un score de 15.</p>
-                                <p>Selon votre maître de jeu, vous serez libre de choisir la méthode de distribution des statistiques. Il est notable que la méthode des lancés et généralement la plus efficace car elle offre le plus de statistiques, si la chance vous souris.</p>
+                                <p>Vous êtes libre de choisir la méthode de distribution des statistiques. Il est notable que la méthode des lancés et généralement la plus efficace car elle offre le plus de statistiques, si la chance vous souris.</p>
+                                <p>Une fois vos statistiques distribuées, ajoutez les bonus de votre race.</p>
                                 <p>Vous avez maintenant vos statistiques. Notez que le modifieur (valeur indiquer au dessus de la valeur inscrite) est automatiquement calculer. Pour connaitre la valeur du modifieur, il faut appliquer la formule suivante: (valeur de la statistique - 10)/2.</p>
                                 <p>La classe défini quels jet de sauvegarde vous bénéficier.</p>
                                 <p>Un total de deux compétences pour être sélectionner en plus des compétences défini par la race et classe.</p>
@@ -211,8 +216,8 @@ function CreationPersonnage(){
                             <p>La vitesse dépend de votre race.</p>
                             <p>La santé est calculer en fonction de la classe. Pour savoir le dé correspondant, consulter le livre des joueurs.</p>
                             <p>Au niveau 1, la santé correspond à la valeur maximum du dé de vie plus le modificateur.</p>
-                            <p>A chaque niveau, il est possible de soit lancer un dé de vie pour gagner autant de santé que le résultat, soit choisir la moyenne (d6: 4, d8: 5, D10: 6, D12: 7).</p>
-                            <p>Les points de vie temporaires correspondent à divers bonus qui peuvent être lancer en faveur du joueur (comme des sorts ou des festins offert par le gentil MJ). Attention, car les bonus ne sont pas cumulable.</p>
+                            <p>A chaque niveau, lancez un dé de vie pour gagner autant de santé que le résultat plus votre modificateur de constitution. Vous pouvez égalemment choisir la moyenne (d6: 4, d8: 5, D10: 6, D12: 7) si votre MJ vous l'accode.</p>
+                            <p>Les points de vie temporaires correspondent à divers bonus qui peuvent être lancer en faveur du joueur (comme des sorts ou des festins). Attention, car les bonus ne sont pas cumulable.</p>
                             </div>
                         }/>
                     </Fade>
@@ -223,8 +228,8 @@ function CreationPersonnage(){
                         <Section text={
                             <div>
                                 <p>Elle se décompose en deux partie: les succès et les echecs.</p>
-                                <p>Quand votre personnage tombe sous les 0 points de vie, il doit alors lancer chaque tour suivant un dé 20. Si le joueur fait au moins 10, c'est un succès. Une réussite critique donne trois succès alors qu'un echec critique donne 2 éches.</p>
-                                <p>Si un joueur à terre réussi à obtenir 3 succès, il se relève alors avec un point de vie. Si il s'agit de 3 échecs, référencer vous à la partie 1 de ce guide.</p>
+                                <p>Quand votre personnage tombe sous les 1 points de vie, il doit alors lancer chaque tour suivant un dé 20. Si le joueur fait au moins 10, c'est un succès. Une réussite critique donne trois succès alors qu'un echec critique donne 2 éches.</p>
+                                <p>Si un joueur à terre réussi à obtenir 3 succès, il se relève alors avec un point de vie après avoir reçu de l'aide. Si il s'agit de 3 échecs, référencer vous à la partie 1 de ce guide.</p>
                             </div>
                         }/>
                     </Fade>
@@ -240,6 +245,8 @@ function CreationPersonnage(){
                             <p>Pour l'équipement et les pièces (cuivre, argent, électrum, or et platine), inscrivez l'équipement donner par votre classe / race</p>
                             <p>Pour les capacités et traits, inscrivez pour une dernière fois les élèments donner par votre classe / race</p>
                             <p>Le bonus de maîtrise est un valeur fixe. Elle commence à 2 au niveau 1 et monte de 1 point tout les 4 niveaux</p>
+                            <p>L'inspiration est une valeur offerte par votre MJ. Pour en obtenir, jouer de manière rôle play. Si votre Mj est satisfait de votre participation à l'ambiance de la partie, il peut vous offrir des points que vous pouvez utilisez en bonus pour vos jets.</p>
+                            <p>La sagesse (perception) passive corrspond à votre instinct. Sa valeur est de 10 plus votre modifieur de sagesse. Vous pouvez ajoutez votre bonus de maitrise si vous possèdez la compétence perception.</p>
                         </div>
                         }/>
                     </Fade>
@@ -250,7 +257,7 @@ function CreationPersonnage(){
                         <Section text={
                         <div>
                             <p>Il est fort probable que vous ayez déjà vu l'anciennement charte d'alignement. Celle-ci à disparu en faveur de ce nouveau système offrant plus de liberté d'expression au joueur.</p>
-                            <p>Les cases sont assez intuitive en elle même: Traits de personnalité, idéaux, liens et défauts correspondent aux caractéristiques de votre personnage. Vous y êtes libre d'y d'écrire la personnalité du personnage que vous incanerez. Certains joueurs peuvent avoir du mal à remplir ces cases car ils ne savent pas encore comment ils vont intéragir avec le monde offert par le maitre de jeu. Ce n'est pas grave, car c'est case ne sont cruciale au déroulement d'une partie. Cependant, les remplirs en cours d'aventure au fur et mesure que vous contruisez l'histoire avec les différents joueurs et maitre de jeu est une bonne chose à faire.</p>
+                            <p>Les cases sont assez intuitive en elle même: Traits de personnalité, idéaux, liens et défauts correspondent aux caractéristiques de votre personnage. Vous y êtes libre d'y d'écrire la personnalité du personnage que vous incanerez. Certains joueurs peuvent avoir du mal à remplir ces cases car ils ne savent pas encore comment ils vont intéragir avec le monde offert par le maitre de jeu. Ce n'est pas grave, car c'est case ne sont cruciale au déroulement d'une partie. Cependant, les remplirs en cours d'aventure au fur et mesure que vous contruisez l'histoire avec les différents joueurs et maitre de jeu est une bonne chose à faire (et elle vous permettra d'obtenir des points d'inspiration!).</p>
                         </div>
                         }/>
                     </Fade>
@@ -450,7 +457,19 @@ function CreationPersonnage(){
                                     </div>
                                     <div>
                                         <input type="checkbox" name="" id="" />
-                                        <p>- Athlétisme</p>
+                                        <p>- Intimidation</p>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="" id="" />
+                                        <p>- Persuation</p>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="" id="" />
+                                        <p>- Représentation</p>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="" id="" />
+                                        <p>- Tromperie</p>
                                     </div>
                                 </div>
                             </div>
@@ -505,7 +524,6 @@ function CreationPersonnage(){
                                 <p>Points de vie temporaires</p>
                             </div>
                         </div>
-                        {/* FIX HEALTH */}
                         <div className={style.healthDeath}>
                             <div>
                                 <div>

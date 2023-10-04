@@ -5,14 +5,22 @@
     }
 }
 
-.fichePersonnageFrame{
-    display: flex;
-    justify-content: center;
-}
-
 .fichePersonnage{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+}
+
+.firstRow, .secondRow, .thridRow{
+    width: 22rem;
+}
+
+p{
+    padding: 0.3rem 0;
+}
+
+.underline{
+    text-decoration: underline;
 }
 
 .firstRow{
@@ -51,6 +59,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         padding: 0.2rem;
 
     }
@@ -93,8 +102,10 @@
 
 .otherMasteries{
     text-align: center;
+    border: 1px solid black;
+    border-radius: 1rem;
     > textarea{
-        width: 100%;
+        width: 90%;
         min-height: 7.7rem;
         resize: vertical;
     }
@@ -349,7 +360,6 @@
 }
 
 .section{
-    width: 60rem;
     padding: 1rem;
     > h3{
         margin: 1rem;
