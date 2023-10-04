@@ -17,7 +17,7 @@ function Footer(){
         <footer>
             <div className={style.logoButtons}>
                 <div className={style.footerAll}>
-                    <img src={Logo} alt="Logo" className={style.imgLogo}/>
+                  <img src={Logo} alt="Logo" className={style.imgLogo} onClick={scrollUp}/>
                     <div className={style.reseaux}>
                         <Link to ="https://www.facebook.com/?locale=fr_FR" target="blank1"><FaFacebookF/></Link>
                         <Link to ="https://www.instagram.com/" target="blank2"><BiLogoInstagramAlt/></Link>
