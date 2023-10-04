@@ -16,19 +16,22 @@ function Footer(){
     return(
         <footer>
             <div className={style.logoButtons}>
-                <img src={Logo} alt="Logo" className={style.imgLogo}/>
-                <ul className={style.boutonsFooter}>
-                    <li><Link to ="/" onClick={scrollUp}>Accueil</Link></li>
-                    <li><Link to ="/contact" onClick={scrollUp}>Nous contacter</Link></li>
-                    <li><Link to ="/mentionslegales" onClick={scrollUp}>Mentions Légales</Link></li>
-                    <li><Link to ="/cgu" onClick={scrollUp}>Conditions Général d'Utilisation</Link></li>
-                </ul>
-                <div className={style.reseaux}>
-                    <Link to ="https://www.facebook.com/?locale=fr_FR" target="blank1"><FaFacebookF/></Link>
-                    <Link to ="https://www.instagram.com/" target="blank2"><BiLogoInstagramAlt/></Link>
-                    <Link to ="https://twitter.com/?lang=fr" target="blank3"><FaXTwitter/></Link>
-                    <Link to ="https://discord.com/" target="blank4"><FaDiscord/></Link>
+                <div className={style.footerAll}>
+                    <img src={Logo} alt="Logo" className={style.imgLogo}/>
+                    <div className={style.reseaux}>
+                        <Link to ="https://www.facebook.com/?locale=fr_FR" target="blank1"><FaFacebookF/></Link>
+                        <Link to ="https://www.instagram.com/" target="blank2"><BiLogoInstagramAlt/></Link>
+                        <Link to ="https://twitter.com/?lang=fr" target="blank3"><FaXTwitter/></Link>
+                        <Link to ="https://discord.com/" target="blank4"><FaDiscord/></Link>
+                    </div>
+                    <ul className={style.boutonsFooter}>
+                        <li><Link to ="/" onClick={scrollUp}>Accueil</Link></li>
+                        <li><Link to ="/contact" onClick={scrollUp}>Nous contacter</Link></li>
+                        <li><Link to ="/mentionslegales" onClick={scrollUp}>Mentions Légales</Link></li>
+                        <li><Link to ="/cgu" onClick={scrollUp}>Conditions Général d'Utilisation</Link></li>
+                    </ul>
                 </div>
+
             </div>
             <p>Aventuriers en herbe &copy;</p>
         </footer>

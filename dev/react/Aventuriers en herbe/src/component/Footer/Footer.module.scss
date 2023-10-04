@@ -2,45 +2,52 @@ footer{
     display: flex;
     flex-flow: column;
     align-items: center;
-    justify-content: center;
     .logoButtons{
         display: flex;
         flex-flow: row;
+        align-items: center;
         margin: 1rem;
         ul{
-        display: flex;
-        flex-flow: column;
-        gap: 1.5rem;
-        list-style: none;
-        li{
-            a{
-                text-decoration: none;
-                color: rgb(129, 129, 129);
-                font-weight: 500;
+            display: flex;
+            flex-flow: row;
+            gap: 1.5rem;
+            list-style: none;
+            li{
+                a{
+                    text-decoration: none;
+                    color: rgb(200, 200, 200);
+                    font-weight: 500;
+                }
             }
         }
-    }
-    img{
-        width: 10rem;
-        opacity: 0.5;
-    };
+        .footerAll{
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        img{
+            width: 5rem;
+            opacity: 0.5;
+        };
     }
 
-    p{
+p{
         color: black;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.8rem;
     }
 }
 
 .reseaux{
     display: flex;
-    flex-flow: column;
+    flex-flow: row;
+    align-items: center;
     text-decoration: none;
-    gap: 0.5rem;
-    color: rgb(129, 129, 129);
-    margin: 0 0 0 5rem;
+    gap: 2rem;
+    color: rgb(200, 200, 200);
     font-size: 1.5rem;
     a{
-        color: rgb(129, 129, 129);
+        color: rgb(200, 200, 200);
     }
 }
