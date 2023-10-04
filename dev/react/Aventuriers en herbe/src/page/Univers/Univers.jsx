@@ -15,7 +15,7 @@ const Univers = () => {
             <br />
             <h2>Donjons et Dragons</h2>
             <p>Donjons et Dragons, abrégé D&D, est le pionnier des jeux de rôle. Plongeant les joueurs dans des mondes médiévaux-fantastiques peuplés de chevaliers, de magiciens, de dragons et de créatures mythiques, D&D offre une expérience classique de JDR. Les aventuriers entreprennent des quêtes héroïques, résolvent des énigmes anciennes, et se battent contre des ennemis redoutables. L'accent est mis sur la créativité, l'improvisation et la coopération pour surmonter les défis.</p>
-            <Link to = "/universDnD"><Button>Donjons et Dragons</Button></Link>
+            <Link to = "/DonjonEtDragon"><Button>Donjons et Dragons</Button></Link>
             <h2>Pokemon</h2>
             <p>Les jeux de rôle Pokémon, offrent une expérience passionnante où vous contrôlez un personnage explorant un monde détaillé. Ces jeux combinent une intrigue captivante avec des phases d'exploration, vous permettant de visiter des villes, rencontrer des personnages et combattre des adversaires. Partir à l'aventure avec un partenaire Pokémon peut être à la fois excitant et intimidant si vous êtes nouveau dans ce type de jeu. Ce guide vous aidera à maîtriser les bases et à apprécier pleinement votre aventure.</p>
             <Link to = "/Pokémon"><Button>Pokémon</Button></Link>

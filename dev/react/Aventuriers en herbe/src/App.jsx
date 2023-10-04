@@ -15,6 +15,8 @@ import LanceurDes from './page/LanceurDes/LanceurDes';
 import Univers from './page/Univers/Univers';
 import Outils from './page/Outils/Outils';
 import Pokemon from './page/Pokemon/Pokemon';
+import DonjonEtDragon from './page/DonjonEtDragon/DonjonEtDragon';
+
 
 
 
@@ -75,6 +77,11 @@ function App() {
           element: <Pokemon/>,
           errorElement: <Erreur/>,
         },
+        {
+          path: "/DonjonEtDragon",
+          element: <DonjonEtDragon/>,
+          errorElement: <Erreur/>
+        }
       ],
     },
   ]);
