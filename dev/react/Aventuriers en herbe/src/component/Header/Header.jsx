@@ -6,7 +6,7 @@ import ButtonNav from "../../component/ButtonNav/ButtonNav"
 function Header(){
     return(
         <header>
-            <img src={logo} alt="logo"/>
+            <Link to ="/"><img src={logo} alt="logo"/></Link>
             <nav>
                 <ul>
                     <li><Link to = "/"><ButtonNav>Acceuil</ButtonNav></Link></li>
