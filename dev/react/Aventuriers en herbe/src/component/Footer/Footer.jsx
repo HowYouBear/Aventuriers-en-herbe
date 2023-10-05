@@ -3,8 +3,8 @@ import Logo from "../../Ressources/logodesign8.png"
 import {Link} from "react-router-dom"
 import Button from "../Button/Button"
 import {FaFacebookF} from "react-icons/Fa"
-import {BiLogoInstagramAlt} from "react-icons/Bi"
 import {AiFillInstagram} from "react-icons/Ai"
+import {FaDiscord} from "react-icons/Fa"
 import {FaXTwitter} from "react-icons/Fa6"
 
 function Footer(){

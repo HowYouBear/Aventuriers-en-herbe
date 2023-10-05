@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom"
 import style from './Connexion.module.scss'
 
-import {BiSolidUser} from "react-icons/bi"
+import {AiOutlineUser} from "react-icons/Ai"
 
 const ConnexionButton = () => {
 
@@ -12,7 +12,7 @@ const ConnexionButton = () => {
 
     return (
         <div>
-             <Link to ="/connexion"><button className={style.buttonConnexion} onClick={scrollUp}><BiSolidUser/></button></Link>
+             <Link to ="/connexion"><button className={style.buttonConnexion} onClick={scrollUp}><AiOutlineUser/></button></Link>
         </div>
     );
 };
