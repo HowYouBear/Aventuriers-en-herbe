@@ -4,7 +4,7 @@ import {Link} from "react-router-dom"
 import Button from "../Button/Button"
 import {FaFacebookF} from "react-icons/Fa"
 import {BiLogoInstagramAlt} from "react-icons/Bi"
-import {FaDiscord} from "react-icons/Fa"
+import {AiFillInstagram} from "react-icons/Ai"
 import {FaXTwitter} from "react-icons/Fa6"
 
 function Footer(){
@@ -20,7 +20,7 @@ function Footer(){
                   <img src={Logo} alt="Logo" className={style.imgLogo} onClick={scrollUp}/>
                     <div className={style.reseaux}>
                         <Link to ="https://www.facebook.com/?locale=fr_FR" target="blank1"><FaFacebookF/></Link>
-                        <Link to ="https://www.instagram.com/" target="blank2"><BiLogoInstagramAlt/></Link>
+                        <Link to ="https://www.instagram.com/" target="blank2"><AiFillInstagram/></Link>
                         <Link to ="https://twitter.com/?lang=fr" target="blank3"><FaXTwitter/></Link>
                         <Link to ="https://discord.com/" target="blank4"><FaDiscord/></Link>
                     </div>
